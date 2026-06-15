@@ -25,7 +25,8 @@ fixtures = [
 		"Legal Practice Administrator",
         "Managing Partner",
         "Paralegal Secretary",
-        "Partner"
+        "Partner",
+        "Trust Accounts Manager"
 	]]]},
 	{"dt": "Custom DocPerm", "filters": [["role", "in", [
         "Attorney",
@@ -34,7 +35,8 @@ fixtures = [
         "Legal Practice Administrator",
         "Managing Partner",
         "Paralegal Secretary",
-        "Partner"
+        "Partner",
+        "Trust Accounts Manager"
 	]]]}
 ]
 
