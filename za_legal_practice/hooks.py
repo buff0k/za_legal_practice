@@ -24,6 +24,7 @@ fixtures = [
         "Client Portal User",
 		"Legal Practice Administrator",
         "Managing Partner",
+        "Paralegal Secretary",
         "Partner"
 	]]]},
 	{"dt": "Custom DocPerm", "filters": [["role", "in", [
@@ -32,6 +33,7 @@ fixtures = [
 		"Client Portal User",
         "Legal Practice Administrator",
         "Managing Partner",
+        "Paralegal Secretary",
         "Partner"
 	]]]}
 ]
