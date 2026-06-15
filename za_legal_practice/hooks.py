@@ -21,12 +21,14 @@ fixtures = [
 	{"dt": "Role", "filters": [["name", "in", [
 		"Legal Practice Administrator",
         "Managing Partner",
-        "Client Portal User"
+        "Client Portal User",
+        "Partner"
 	]]]},
 	{"dt": "Custom DocPerm", "filters": [["role", "in", [
 		"Legal Practice Administrator",
         "Managing Partner",
-        "Client Portal User"
+        "Client Portal User",
+        "Partner"
 	]]]}
 ]
 
