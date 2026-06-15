@@ -4,22 +4,18 @@ app_publisher = "BuFf0k"
 app_description = "A full Legal Practice Solution built on Frappe and ERPNext"
 app_email = "buff0k@gmail.com"
 app_license = "mit"
-
-# Apps
-# ------------------
-
-# required_apps = []
+required_apps = ["frappe/erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "za_legal_practice",
-# 		"logo": "/assets/za_legal_practice/logo.png",
-# 		"title": "ZA Legal Practice",
-# 		"route": "/za_legal_practice",
-# 		"has_permission": "za_legal_practice.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "za_legal_practice",
+		"logo": "/assets/za_legal_practice/za_legal_practice_logo.png",
+		"title": "ZA Legal Practice",
+		"route": "/za_legal_practice",
+		"has_permission": "za_legal_practice.api.permission.has_app_permission"
+	}
+]
 
 # Includes in <head>
 # ------------------
