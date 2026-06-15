@@ -17,6 +17,15 @@ add_to_apps_screen = [
 	}
 ]
 
+fixtures = [
+	{"dt": "Role", "filters": [["name", "in", [
+		"Legal Practice Administrator",
+	]]]},
+	{"dt": "Custom DocPerm", "filters": [["role", "in", [
+		"Legal Practice Administrator",
+	]]]}
+]
+
 # Includes in <head>
 # ------------------
 
