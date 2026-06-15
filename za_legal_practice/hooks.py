@@ -10,10 +10,10 @@ required_apps = ["frappe/erpnext"]
 add_to_apps_screen = [
 	{
 		"name": "za_legal_practice",
-		"logo": "/assets/za_legal_practice/za_legal_practice_logo.png",
+		"logo": "/assets/za_legal_practice/images/za_legal_practice_logo.png",
 		"title": "ZA Legal Practice",
 		"route": "/za_legal_practice",
-		"has_permission": "za_legal_practice.api.permission.has_app_permission"
+		"has_permission": "za_legal_practice.api.has_app_permission.has_app_permission"
 	}
 ]
 
@@ -47,7 +47,7 @@ add_to_apps_screen = [
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "za_legal_practice/public/icons.svg"
+app_include_icons = "/assets/za_legal_practice/images/za_legal_practice_logo.svg"
 
 # Home Pages
 # ----------
