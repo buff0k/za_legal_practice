@@ -20,11 +20,13 @@ add_to_apps_screen = [
 fixtures = [
 	{"dt": "Role", "filters": [["name", "in", [
 		"Legal Practice Administrator",
-        "Managing Partner"
+        "Managing Partner",
+        "Client Portal User"
 	]]]},
 	{"dt": "Custom DocPerm", "filters": [["role", "in", [
 		"Legal Practice Administrator",
-        "Managing Partner"
+        "Managing Partner",
+        "Client Portal User"
 	]]]}
 ]
 
