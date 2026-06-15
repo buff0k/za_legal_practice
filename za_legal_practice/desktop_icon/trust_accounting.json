@@ -1,0 +1,22 @@
+{
+ "app": "za_legal_practice",
+ "bg_color": "gray",
+ "creation": "2026-06-15 20:04:45.172649",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "Link",
+ "idx": 0,
+ "label": "Trust Accounting",
+ "link_to": "Trust Accounting",
+ "link_type": "Workspace Sidebar",
+ "logo_url": "/assets/za_legal_practice/images/trust_accounting_logo.png",
+ "modified": "2026-06-15 20:33:09.305428",
+ "modified_by": "Administrator",
+ "name": "Trust Accounting",
+ "owner": "Administrator",
+ "parent_icon": "Legal Practice",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

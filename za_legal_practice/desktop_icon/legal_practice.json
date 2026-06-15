@@ -1,0 +1,26 @@
+{
+ "app": "za_legal_practice",
+ "bg_color": "gray",
+ "creation": "2026-06-15 19:40:34.410363",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "App",
+ "idx": 0,
+ "label": "Legal Practice",
+ "link_to": "",
+ "link_type": "External",
+ "logo_url": "/assets/za_legal_practice/images/za_legal_practice_logo.png",
+ "modified": "2026-06-15 19:58:35.274731",
+ "modified_by": "Administrator",
+ "name": "Legal Practice",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sidebar": "",
+ "standard": 1
+}

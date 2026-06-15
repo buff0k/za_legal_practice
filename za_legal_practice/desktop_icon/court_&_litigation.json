@@ -1,0 +1,22 @@
+{
+ "app": "za_legal_practice",
+ "bg_color": "gray",
+ "creation": "2026-06-15 20:10:52.766942",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "Link",
+ "idx": 0,
+ "label": "Court & Litigation",
+ "link_to": "Court & Litigation",
+ "link_type": "Workspace Sidebar",
+ "logo_url": "/assets/za_legal_practice/images/litigation_logo.png",
+ "modified": "2026-06-15 20:33:58.281664",
+ "modified_by": "Administrator",
+ "name": "Court & Litigation",
+ "owner": "Administrator",
+ "parent_icon": "Legal Practice",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

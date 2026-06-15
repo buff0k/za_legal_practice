@@ -1,0 +1,26 @@
+{
+ "app": "za_legal_practice",
+ "creation": "2026-06-15 19:36:24.836429",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Companies",
+   "link_to": "Company",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-15 20:02:28.009751",
+ "modified_by": "Administrator",
+ "name": "Matters",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "Matters"
+}

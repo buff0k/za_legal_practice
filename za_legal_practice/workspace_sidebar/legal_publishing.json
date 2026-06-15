@@ -1,0 +1,26 @@
+{
+ "app": "za_legal_practice",
+ "creation": "2026-06-15 19:38:14.090428",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Comapnies",
+   "link_to": "Company",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-15 20:13:42.202495",
+ "modified_by": "Administrator",
+ "name": "Legal Publishing",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "Legal Publishing"
+}
