@@ -1,0 +1,639 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-06-16 19:07:35.565318",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+"field_order": [
+    "general_section",
+    "naming_series",
+    "matter_type_name",
+    "matter_type_code",
+    "status",
+    "column_break_general_1",
+    "practice_area",
+    "practice_branch",
+    "is_default_for_practice_area",
+    "disabled",
+    "description_section",
+    "description",
+    "workflow_section",
+    "default_matter_status",
+    "default_matter_workflow",
+    "matter_number_prefix",
+    "column_break_workflow_1",
+    "enable_stage_tracking",
+    "default_stage",
+    "auto_create_checklist",
+    "auto_create_default_tasks",
+    "trust_accounting_section",
+    "trust_handling",
+    "default_trust_account",
+    "default_trust_bank_gl_account",
+    "default_trust_creditor_account",
+    "column_break_trust_1",
+    "require_trust_account_on_matter",
+    "allow_trust_receipts",
+    "allow_trust_payments",
+    "allow_trust_to_business_transfers",
+    "compliance_section",
+    "require_conflict_check",
+    "require_fica",
+    "require_mandate",
+    "column_break_compliance_1",
+    "allow_fica_override",
+    "allow_mandate_override",
+    "allow_conflict_override",
+    "require_partner_approval_to_open",
+    "billing_section",
+    "billing_model",
+    "default_hourly_rate_item",
+    "default_consultation_item",
+    "default_disbursement_item",
+    "column_break_billing_1",
+    "default_income_account",
+    "default_disbursement_recovery_account",
+    "default_sales_taxes_and_charges_template",
+    "require_partner_approval_for_billing",
+    "module_flags_section",
+    "enable_litigation_fields",
+    "enable_conveyancing_fields",
+    "enable_collections_fields",
+    "enable_estates_fields",
+    "column_break_module_flags_1",
+    "enable_commercial_fields",
+    "enable_family_law_fields",
+    "enable_criminal_law_fields",
+    "enable_general_advisory_fields",
+    "closing_section",
+    "prevent_closing_with_trust_balance",
+    "prevent_closing_with_unbilled_time",
+    "prevent_closing_with_unbilled_disbursements",
+    "column_break_closing_1",
+    "prevent_closing_with_outstanding_debtor_balance",
+    "prevent_closing_with_open_tasks",
+    "matter_closing_approval_role",
+    "required_documents_section",
+    "required_documents",
+    "checklist_section",
+    "checklist_items",
+    "default_tasks_section",
+    "default_tasks",
+    "billing_items_section",
+    "billing_items",
+    "system_section",
+    "sort_order"
+  ],
+  "fields": [
+    {
+      "fieldname": "general_section",
+      "fieldtype": "Section Break",
+      "label": "General"
+    },
+    {
+      "default": "MTY-.#####",
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "MTY-.#####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "matter_type_name",
+      "fieldtype": "Data",
+      "in_global_search": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Matter Type Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "matter_type_code",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Matter Type Code",
+      "unique": 1
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Active\nInactive\nArchived",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_general_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "practice_area",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Practice Area",
+      "options": "Practice Area",
+      "reqd": 1
+    },
+    {
+      "fieldname": "practice_branch",
+      "fieldtype": "Link",
+      "in_standard_filter": 1,
+      "label": "Practice Branch",
+      "options": "Practice Branch"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_default_for_practice_area",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Is Default for Practice Area"
+    },
+    {
+      "default": "0",
+      "fieldname": "disabled",
+      "fieldtype": "Check",
+      "in_standard_filter": 1,
+      "label": "Disabled"
+    },
+    {
+      "fieldname": "description_section",
+      "fieldtype": "Section Break",
+      "label": "Description"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "workflow_section",
+      "fieldtype": "Section Break",
+      "label": "Workflow and Numbering"
+    },
+    {
+      "default": "Enquiry",
+      "fieldname": "default_matter_status",
+      "fieldtype": "Select",
+      "label": "Default Matter Status",
+      "options": "Enquiry\nConflict Check\nFICA Pending\nMandate Pending\nOpen\nActive",
+      "reqd": 1
+    },
+    {
+      "fieldname": "default_matter_workflow",
+      "fieldtype": "Link",
+      "label": "Default Matter Workflow",
+      "options": "Workflow"
+    },
+    {
+      "fieldname": "matter_number_prefix",
+      "fieldtype": "Data",
+      "label": "Matter Number Prefix"
+    },
+    {
+      "fieldname": "column_break_workflow_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "enable_stage_tracking",
+      "fieldtype": "Check",
+      "label": "Enable Stage Tracking"
+    },
+    {
+      "fieldname": "default_stage",
+      "fieldtype": "Data",
+      "label": "Default Stage"
+    },
+    {
+      "default": "1",
+      "fieldname": "auto_create_checklist",
+      "fieldtype": "Check",
+      "label": "Auto Create Checklist"
+    },
+    {
+      "default": "1",
+      "fieldname": "auto_create_default_tasks",
+      "fieldtype": "Check",
+      "label": "Auto Create Default Tasks"
+    },
+    {
+      "fieldname": "trust_accounting_section",
+      "fieldtype": "Section Break",
+      "label": "Trust Accounting Defaults"
+    },
+    {
+      "default": "Allowed",
+      "fieldname": "trust_handling",
+      "fieldtype": "Select",
+      "label": "Trust Handling",
+      "options": "Not Applicable\nAllowed\nRequired",
+      "reqd": 1
+    },
+    {
+      "fieldname": "default_trust_account",
+      "fieldtype": "Link",
+      "label": "Default Trust Account",
+      "options": "Bank Account"
+    },
+    {
+      "fieldname": "default_trust_bank_gl_account",
+      "fieldtype": "Link",
+      "label": "Default Trust Bank GL Account",
+      "options": "Account",
+      "read_only": 1
+    },
+    {
+      "fieldname": "default_trust_creditor_account",
+      "fieldtype": "Link",
+      "label": "Default Trust Creditor Account",
+      "options": "Account"
+    },
+    {
+      "fieldname": "column_break_trust_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "require_trust_account_on_matter",
+      "fieldtype": "Check",
+      "label": "Require Trust Account on Matter"
+    },
+    {
+      "default": "1",
+      "fieldname": "allow_trust_receipts",
+      "fieldtype": "Check",
+      "label": "Allow Trust Receipts"
+    },
+    {
+      "default": "1",
+      "fieldname": "allow_trust_payments",
+      "fieldtype": "Check",
+      "label": "Allow Trust Payments"
+    },
+    {
+      "default": "1",
+      "fieldname": "allow_trust_to_business_transfers",
+      "fieldtype": "Check",
+      "label": "Allow Trust-to-Business Transfers"
+    },
+    {
+      "fieldname": "compliance_section",
+      "fieldtype": "Section Break",
+      "label": "Compliance Defaults"
+    },
+    {
+      "default": "1",
+      "fieldname": "require_conflict_check",
+      "fieldtype": "Check",
+      "label": "Require Conflict Check"
+    },
+    {
+      "default": "1",
+      "fieldname": "require_fica",
+      "fieldtype": "Check",
+      "label": "Require FICA"
+    },
+    {
+      "default": "1",
+      "fieldname": "require_mandate",
+      "fieldtype": "Check",
+      "label": "Require Mandate"
+    },
+    {
+      "fieldname": "column_break_compliance_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "allow_fica_override",
+      "fieldtype": "Check",
+      "label": "Allow FICA Override"
+    },
+    {
+      "default": "1",
+      "fieldname": "allow_mandate_override",
+      "fieldtype": "Check",
+      "label": "Allow Mandate Override"
+    },
+    {
+      "default": "1",
+      "fieldname": "allow_conflict_override",
+      "fieldtype": "Check",
+      "label": "Allow Conflict Override"
+    },
+    {
+      "default": "0",
+      "fieldname": "require_partner_approval_to_open",
+      "fieldtype": "Check",
+      "label": "Require Partner Approval to Open"
+    },
+    {
+      "fieldname": "billing_section",
+      "fieldtype": "Section Break",
+      "label": "Billing Defaults"
+    },
+    {
+      "default": "Hourly",
+      "fieldname": "billing_model",
+      "fieldtype": "Select",
+      "label": "Billing Model",
+      "options": "Hourly\nFixed Fee\nContingency\nTariff\nCollection Commission\nNo Charge\nMixed",
+      "reqd": 1
+    },
+    {
+      "fieldname": "default_hourly_rate_item",
+      "fieldtype": "Link",
+      "label": "Default Hourly Rate Item",
+      "options": "Item"
+    },
+    {
+      "fieldname": "default_consultation_item",
+      "fieldtype": "Link",
+      "label": "Default Consultation Item",
+      "options": "Item"
+    },
+    {
+      "fieldname": "default_disbursement_item",
+      "fieldtype": "Link",
+      "label": "Default Disbursement Item",
+      "options": "Item"
+    },
+    {
+      "fieldname": "column_break_billing_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "default_income_account",
+      "fieldtype": "Link",
+      "label": "Default Income Account",
+      "options": "Account"
+    },
+    {
+      "fieldname": "default_disbursement_recovery_account",
+      "fieldtype": "Link",
+      "label": "Default Disbursement Recovery Account",
+      "options": "Account"
+    },
+    {
+      "fieldname": "default_sales_taxes_and_charges_template",
+      "fieldtype": "Link",
+      "label": "Default Sales Taxes and Charges Template",
+      "options": "Sales Taxes and Charges Template"
+    },
+    {
+      "default": "1",
+      "fieldname": "require_partner_approval_for_billing",
+      "fieldtype": "Check",
+      "label": "Require Partner Approval for Billing"
+    },
+    {
+      "fieldname": "module_flags_section",
+      "fieldtype": "Section Break",
+      "label": "Matter Module Flags"
+    },
+    {
+      "default": "0",
+      "fieldname": "enable_litigation_fields",
+      "fieldtype": "Check",
+      "label": "Enable Litigation Fields"
+    },
+    {
+      "default": "0",
+      "fieldname": "enable_conveyancing_fields",
+      "fieldtype": "Check",
+      "label": "Enable Conveyancing Fields"
+    },
+    {
+      "default": "0",
+      "fieldname": "enable_collections_fields",
+      "fieldtype": "Check",
+      "label": "Enable Collections Fields"
+    },
+    {
+      "default": "0",
+      "fieldname": "enable_estates_fields",
+      "fieldtype": "Check",
+      "label": "Enable Estates Fields"
+    },
+    {
+      "fieldname": "column_break_module_flags_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "enable_commercial_fields",
+      "fieldtype": "Check",
+      "label": "Enable Commercial Fields"
+    },
+    {
+      "default": "0",
+      "fieldname": "enable_family_law_fields",
+      "fieldtype": "Check",
+      "label": "Enable Family Law Fields"
+    },
+    {
+      "default": "0",
+      "fieldname": "enable_criminal_law_fields",
+      "fieldtype": "Check",
+      "label": "Enable Criminal Law Fields"
+    },
+    {
+      "default": "0",
+      "fieldname": "enable_general_advisory_fields",
+      "fieldtype": "Check",
+      "label": "Enable General Advisory Fields"
+    },
+    {
+      "fieldname": "closing_section",
+      "fieldtype": "Section Break",
+      "label": "Matter Closing Controls"
+    },
+    {
+      "default": "1",
+      "fieldname": "prevent_closing_with_trust_balance",
+      "fieldtype": "Check",
+      "label": "Prevent Closing with Trust Balance"
+    },
+    {
+      "default": "1",
+      "fieldname": "prevent_closing_with_unbilled_time",
+      "fieldtype": "Check",
+      "label": "Prevent Closing with Unbilled Time"
+    },
+    {
+      "default": "1",
+      "fieldname": "prevent_closing_with_unbilled_disbursements",
+      "fieldtype": "Check",
+      "label": "Prevent Closing with Unbilled Disbursements"
+    },
+    {
+      "fieldname": "column_break_closing_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "prevent_closing_with_outstanding_debtor_balance",
+      "fieldtype": "Check",
+      "label": "Prevent Closing with Outstanding Debtor Balance"
+    },
+    {
+      "default": "1",
+      "fieldname": "prevent_closing_with_open_tasks",
+      "fieldtype": "Check",
+      "label": "Prevent Closing with Open Tasks"
+    },
+    {
+      "fieldname": "matter_closing_approval_role",
+      "fieldtype": "Link",
+      "label": "Matter Closing Approval Role",
+      "options": "Role"
+    },
+    {
+      "fieldname": "required_documents_section",
+      "fieldtype": "Section Break",
+      "label": "Required Documents"
+    },
+    {
+      "fieldname": "required_documents",
+      "fieldtype": "Table",
+      "label": "Required Documents",
+      "options": "Matter Type Required Document"
+    },
+    {
+      "fieldname": "checklist_section",
+      "fieldtype": "Section Break",
+      "label": "Checklist Items"
+    },
+    {
+      "fieldname": "checklist_items",
+      "fieldtype": "Table",
+      "label": "Checklist Items",
+      "options": "Matter Type Checklist Item"
+    },
+    {
+      "fieldname": "default_tasks_section",
+      "fieldtype": "Section Break",
+      "label": "Default Tasks"
+    },
+    {
+      "fieldname": "default_tasks",
+      "fieldtype": "Table",
+      "label": "Default Tasks",
+      "options": "Matter Type Default Task"
+    },
+    {
+      "fieldname": "billing_items_section",
+      "fieldtype": "Section Break",
+      "label": "Billing Items"
+    },
+    {
+      "fieldname": "billing_items",
+      "fieldtype": "Table",
+      "label": "Billing Items",
+      "options": "Matter Type Billing Item"
+    },
+    {
+      "fieldname": "system_section",
+      "fieldtype": "Section Break",
+      "label": "System"
+    },
+    {
+      "default": "0",
+      "fieldname": "sort_order",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Sort Order"
+    }
+  ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-16 19:18:17.347136",
+ "modified_by": "Administrator",
+ "module": "Practice Setup",
+ "name": "Matter Type",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Legal Practice Administrator",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Managing Partner",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Partner"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Attorney"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Compliance Officer"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Trust Accounts Manager"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Accounts User"
+    }
+  ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "sort_order",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "matter_type_name",
+ "track_changes": 1
+}
