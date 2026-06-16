@@ -26,9 +26,20 @@
    "link_type": "DocType",
    "show_arrow": 0,
    "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Practice Area",
+   "link_to": "Practice Area",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
   }
  ],
- "modified": "2026-06-16 18:48:27.729683",
+ "modified": "2026-06-16 18:49:59.250221",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Practice Setup",
