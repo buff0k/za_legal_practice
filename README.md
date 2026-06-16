@@ -2,7 +2,7 @@
 
 A South African legal practice management application built on Frappe and ERPNext.
 
-The app extends ERPNext with legal-practice setup, attorney profiles, matter configuration, practice areas, practice branches, matter types, and trust-account configuration using ERPNext's existing `Bank Account` functionality.
+The app extends ERPNext with legal-practice setup, attorney profiles, matter configuration, practice areas, practice branches, matter types, trust-account configuration using ERPNext's existing `Bank Account` functionality, and planned South African legislation / legal-instrument processing.
 
 ## Repository
 
@@ -25,12 +25,73 @@ Required:
 - Frappe Framework v16
 - ERPNext v16
 - Bench CLI
+- Python dependencies declared in `pyproject.toml`
+- System OCR / PDF dependencies listed below when using the legislation OCR features
 
 Not required by default:
 
 - HRMS / Frappe HR
 
 HRMS support is optional. Attorney records are based on `User` and `Attorney Profile`. Linking to `Employee` is only enabled where HRMS is installed and configured.
+
+## Python package dependencies
+
+Python dependencies are declared in `pyproject.toml`.
+
+The legislation / legal-instrument module uses open-source Akoma Ntoso tooling from Laws.Africa:
+
+- [Cobalt](https://github.com/laws-africa/cobalt) for Akoma Ntoso and FRBR URI handling.
+- [Bluebell](https://github.com/laws-africa/bluebell) for parsing and serialising Akoma Ntoso documents.
+
+OCR and PDF processing dependencies include:
+
+- `ocrmypdf`
+- `pytesseract`
+- `pillow`
+- `pypdf`
+- `pymupdf`
+- `pikepdf`
+- `python-magic`
+
+## System dependencies for OCR and PDF processing
+
+When deploying on Frappe Cloud, the app declares required Ubuntu packages in `pyproject.toml` under:
+
+```toml
+[deploy.dependencies.apt]
+```
+
+When not using Frappe Cloud, install the required system packages manually on the server.
+
+For Ubuntu / Debian:
+
+```bash
+sudo apt update
+sudo apt install -y \
+  tesseract-ocr \
+  tesseract-ocr-eng \
+  ghostscript \
+  qpdf \
+  unpaper \
+  poppler-utils \
+  libmagic1
+```
+
+These packages are required for OCR and PDF processing, especially when using `ocrmypdf`, `pytesseract`, scanned Gazette PDFs, and other source documents that need text extraction.
+
+## Attributions
+
+This project uses and is inspired by open-source legal informatics work from Laws.Africa.
+
+The planned legislation / legal-instrument functionality is informed by the following Laws.Africa projects:
+
+- [Indigo](https://github.com/laws-africa/indigo) — an open-source platform for managing and publishing legislation in Akoma Ntoso.
+- [Cobalt](https://github.com/laws-africa/cobalt) — a Python library for working with Akoma Ntoso documents and FRBR URIs.
+- [Bluebell](https://github.com/laws-africa/bluebell) — a parser and serialiser for Akoma Ntoso legislative documents.
+
+ZA Legal Practice is a separate Frappe / ERPNext application and is not affiliated with, endorsed by, or maintained by Laws.Africa.
+
+Please refer to the respective Laws.Africa repositories for their licences, copyright notices, documentation, and contribution guidelines.
 
 ## Current status
 
@@ -81,27 +142,43 @@ Planned setup and operational DocTypes include:
 - Matter billing and disbursement recovery.
 - Reports for trust accounting, matters, billing, and compliance.
 
+Planned legislation / legal-instrument DocTypes include:
+
+- Legal Jurisdiction.
+- Legal Instrument.
+- Legal Instrument Expression.
+- Legal Instrument Manifestation.
+- Legal Provision.
+- Legal Citation.
+- Legal Amendment.
+- Legal Consolidation.
+- Legal OCR Job.
+- Legal Editorial Note.
+
 Future / deferred:
 
-- Legal publishing / Acts module.
 - Client portal features.
 - Optional HRMS integration.
+- Advanced legal publishing workflows.
+- Advanced OCR and document-layout extraction.
 
 ## Installation
 
 Install the app using the [bench](https://github.com/frappe/bench) CLI.
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app https://github.com/buff0k/za_legal_practice --branch version-16
-bench install-app za_legal_practice
-```
-
 If ERPNext is not already installed on the site, install ERPNext first.
 
 ```bash
+cd $PATH_TO_YOUR_BENCH
 bench get-app erpnext --branch version-16
 bench --site your-site.local install-app erpnext
+```
+
+Then install ZA Legal Practice:
+
+```bash
+cd $PATH_TO_YOUR_BENCH
+bench get-app https://github.com/buff0k/za_legal_practice --branch version-16
 bench --site your-site.local install-app za_legal_practice
 ```
 
@@ -110,6 +187,42 @@ Then run:
 ```bash
 bench --site your-site.local migrate
 bench --site your-site.local clear-cache
+```
+
+## Installing Python dependencies from pyproject.toml
+
+After pulling or changing `pyproject.toml`, install or refresh the app's Python dependencies from the bench environment.
+
+From the bench root:
+
+```bash
+cd $PATH_TO_YOUR_BENCH
+bench setup requirements
+```
+
+Then run:
+
+```bash
+bench --site your-site.local migrate
+bench --site your-site.local clear-cache
+bench restart
+```
+
+`bench build` is for frontend assets. It does not install Python dependencies from `pyproject.toml`.
+
+Use `bench build` only after JavaScript, CSS, public assets, desk pages, or frontend bundles have changed:
+
+```bash
+bench build --app za_legal_practice
+```
+
+If the dependency change is not picked up, you can install the app in editable mode directly into the bench Python environment:
+
+```bash
+cd $PATH_TO_YOUR_BENCH
+./env/bin/pip install -e apps/za_legal_practice
+bench --site your-site.local migrate
+bench restart
 ```
 
 ## Initial setup
@@ -179,29 +292,38 @@ Example:
 
 ```python
 fixtures = [
-    {"dt": "Custom Field", "filters": [["name", "in",[
-        "Bank Account-za_lp_legal_trust_account_section",
-        "Bank Account-za_lp_is_legal_trust_account",
-        "Bank Account-za_lp_trust_account_type",
-        "Bank Account-za_lp_trust_account_active",
-        "Bank Account-za_lp_trust_controls_column_break",
-        "Bank Account-za_lp_requires_dual_approval",
-        "Bank Account-za_lp_require_matter_dimension",
-        "Bank Account-za_lp_block_manual_posting",
-        "Bank Account-za_lp_trust_accounting_accounts_section",
-        "Bank Account-za_lp_trust_creditor_account",
-        "Bank Account-za_lp_trust_investment_account",
-        "Bank Account-za_lp_lpff_interest_account",
-        "Bank Account-za_lp_trust_accounts_column_break",
-        "Bank Account-za_lp_trust_bank_charges_account",
-        "Bank Account-za_lp_trust_rounding_difference_account",
-        "Bank Account-za_lp_trust_account_ownership_section",
-        "Bank Account-za_lp_responsible_attorney",
-        "Bank Account-za_lp_practice_branch",
-        "Bank Account-za_lp_practice_area",
-        "Bank Account-za_lp_trust_notes_column_break",
-        "Bank Account-za_lp_trust_account_notes"
-    ]]]}
+    {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Bank Account-za_lp_legal_trust_account_section",
+                    "Bank Account-za_lp_is_legal_trust_account",
+                    "Bank Account-za_lp_trust_account_type",
+                    "Bank Account-za_lp_trust_account_active",
+                    "Bank Account-za_lp_trust_controls_column_break",
+                    "Bank Account-za_lp_requires_dual_approval",
+                    "Bank Account-za_lp_require_matter_dimension",
+                    "Bank Account-za_lp_block_manual_posting",
+                    "Bank Account-za_lp_trust_accounting_accounts_section",
+                    "Bank Account-za_lp_trust_creditor_account",
+                    "Bank Account-za_lp_trust_investment_account",
+                    "Bank Account-za_lp_lpff_interest_account",
+                    "Bank Account-za_lp_trust_accounts_column_break",
+                    "Bank Account-za_lp_trust_bank_charges_account",
+                    "Bank Account-za_lp_trust_rounding_difference_account",
+                    "Bank Account-za_lp_trust_account_ownership_section",
+                    "Bank Account-za_lp_responsible_attorney",
+                    "Bank Account-za_lp_practice_branch",
+                    "Bank Account-za_lp_practice_area",
+                    "Bank Account-za_lp_trust_notes_column_break",
+                    "Bank Account-za_lp_trust_account_notes",
+                ],
+            ]
+        ],
+    }
 ]
 ```
 
@@ -231,9 +353,21 @@ bench --site your-site.local clear-cache
 bench restart
 ```
 
-When adding custom fields to standard ERPNext DocTypes, use the `za_lp_` fieldname prefix.
+After changing Python dependencies in `pyproject.toml`, run from the bench root:
 
-When adding fields to app-owned DocTypes, the `za_lp_` prefix is not required unless there is a specific collision risk.
+```bash
+bench setup requirements
+bench --site your-site.local migrate
+bench restart
+```
+
+After changing frontend assets, run:
+
+```bash
+bench build --app za_legal_practice
+```
+
+When adding custom fields to standard ERPNext DocTypes, use the `za_lp_` fieldname prefix.
 
 ## License
 
