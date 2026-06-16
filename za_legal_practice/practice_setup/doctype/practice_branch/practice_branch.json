@@ -8,499 +8,500 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-    "general_section",
-    "naming_series",
-    "branch_name",
-    "branch_code",
-    "status",
-    "column_break_general_1",
-    "erpnext_branch",
-    "is_head_office",
-    "disabled",
-    "address_section",
-    "address",
-    "city",
-    "province",
-    "postal_code",
-    "column_break_address_1",
-    "country",
-    "phone",
-    "email",
-    "website",
-    "ownership_section",
-    "branch_manager",
-    "responsible_partner",
-    "default_attorney",
-    "column_break_ownership_1",
-    "default_practice_area",
-    "default_cost_center",
-    "default_warehouse",
-    "trust_accounting_section",
-    "default_trust_account",
-    "default_trust_bank_gl_account",
-    "default_trust_creditor_account",
-    "column_break_trust_1",
-    "require_trust_account_on_matter",
-    "allow_trust_receipts",
-    "allow_trust_payments",
-    "allow_trust_to_business_transfers",
-    "billing_section",
-    "default_business_bank_account",
-    "default_business_bank_gl_account",
-    "default_income_account",
-    "default_receivable_account",
-    "column_break_billing_1",
-    "default_disbursement_recovery_account",
-    "default_write_off_account",
-    "default_sales_taxes_and_charges_template",
-    "compliance_section",
-    "require_conflict_check",
-    "require_fica",
-    "require_mandate",
-    "column_break_compliance_1",
-    "trust_reconciliation_reviewer_role",
-    "matter_closing_approval_role",
-    "invoice_approval_role",
-    "numbering_section",
-    "matter_number_prefix",
-    "default_matter_status",
-    "default_matter_workflow",
-    "column_break_numbering_1",
-    "sort_order",
-    "notes"
-  ],
-  "fields": [
-    {
-      "fieldname": "general_section",
-      "fieldtype": "Section Break",
-      "label": "General"
-    },
-    {
-      "default": "PBR-.#####",
-      "fieldname": "naming_series",
-      "fieldtype": "Select",
-      "label": "Naming Series",
-      "options": "PBR-.#####",
-      "reqd": 1
-    },
-    {
-      "fieldname": "branch_name",
-      "fieldtype": "Data",
-      "in_global_search": 1,
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Branch Name",
-      "reqd": 1
-    },
-    {
-      "fieldname": "branch_code",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Branch Code",
-      "unique": 1
-    },
-    {
-      "default": "Active",
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Status",
-      "options": "Active\nInactive\nArchived",
-      "reqd": 1
-    },
-    {
-      "fieldname": "column_break_general_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "erpnext_branch",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "label": "ERPNext Branch",
-      "options": "Branch"
-    },
-    {
-      "default": "0",
-      "fieldname": "is_head_office",
-      "fieldtype": "Check",
-      "in_list_view": 1,
-      "label": "Is Head Office"
-    },
-    {
-      "default": "0",
-      "fieldname": "disabled",
-      "fieldtype": "Check",
-      "in_standard_filter": 1,
-      "label": "Disabled"
-    },
-    {
-      "fieldname": "address_section",
-      "fieldtype": "Section Break",
-      "label": "Address and Contact"
-    },
-    {
-      "fieldname": "address",
-      "fieldtype": "Small Text",
-      "label": "Address"
-    },
-    {
-      "fieldname": "city",
-      "fieldtype": "Data",
-      "label": "City"
-    },
-    {
-      "fieldname": "province",
-      "fieldtype": "Select",
-      "label": "Province",
-      "options": "\nEastern Cape\nFree State\nGauteng\nKwaZulu-Natal\nLimpopo\nMpumalanga\nNorthern Cape\nNorth West\nWestern Cape"
-    },
-    {
-      "fieldname": "postal_code",
-      "fieldtype": "Data",
-      "label": "Postal Code"
-    },
-    {
-      "fieldname": "column_break_address_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "South Africa",
-      "fieldname": "country",
-      "fieldtype": "Link",
-      "label": "Country",
-      "options": "Country"
-    },
-    {
-      "fieldname": "phone",
-      "fieldtype": "Data",
-      "label": "Phone"
-    },
-    {
-      "fieldname": "email",
-      "fieldtype": "Data",
-      "label": "Email",
-      "options": "Email"
-    },
-    {
-      "fieldname": "website",
-      "fieldtype": "Data",
-      "label": "Website",
-      "options": "URL"
-    },
-    {
-      "fieldname": "ownership_section",
-      "fieldtype": "Section Break",
-      "label": "Ownership and Defaults"
-    },
-    {
-      "fieldname": "branch_manager",
-      "fieldtype": "Link",
-      "label": "Branch Manager",
-      "options": "Attorney Profile"
-    },
-    {
-      "fieldname": "responsible_partner",
-      "fieldtype": "Link",
-      "label": "Responsible Partner",
-      "options": "Attorney Profile"
-    },
-    {
-      "fieldname": "default_attorney",
-      "fieldtype": "Link",
-      "label": "Default Attorney",
-      "options": "Attorney Profile"
-    },
-    {
-      "fieldname": "column_break_ownership_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "default_practice_area",
-      "fieldtype": "Link",
-      "label": "Default Practice Area",
-      "options": "Practice Area"
-    },
-    {
-      "fieldname": "default_cost_center",
-      "fieldtype": "Link",
-      "label": "Default Cost Center",
-      "options": "Cost Center"
-    },
-    {
-      "fieldname": "default_warehouse",
-      "fieldtype": "Link",
-      "label": "Default Warehouse",
-      "options": "Warehouse"
-    },
-    {
-      "fieldname": "trust_accounting_section",
-      "fieldtype": "Section Break",
-      "label": "Trust Accounting Defaults"
-    },
-    {
-      "fieldname": "default_trust_account",
-      "fieldtype": "Link",
-      "label": "Default Trust Account",
-      "options": "Bank Account"
-    },
-    {
-      "fieldname": "default_trust_bank_gl_account",
-      "fieldtype": "Link",
-      "label": "Default Trust Bank GL Account",
-      "options": "Account",
-      "read_only": 1
-    },
-    {
-      "fieldname": "default_trust_creditor_account",
-      "fieldtype": "Link",
-      "label": "Default Trust Creditor Account",
-      "options": "Account"
-    },
-    {
-      "fieldname": "column_break_trust_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "1",
-      "fieldname": "require_trust_account_on_matter",
-      "fieldtype": "Check",
-      "label": "Require Trust Account on Matter"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_trust_receipts",
-      "fieldtype": "Check",
-      "label": "Allow Trust Receipts"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_trust_payments",
-      "fieldtype": "Check",
-      "label": "Allow Trust Payments"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_trust_to_business_transfers",
-      "fieldtype": "Check",
-      "label": "Allow Trust-to-Business Transfers"
-    },
-    {
-      "fieldname": "billing_section",
-      "fieldtype": "Section Break",
-      "label": "Billing and Accounting Defaults"
-    },
-    {
-      "fieldname": "default_business_bank_account",
-      "fieldtype": "Link",
-      "label": "Default Business Bank Account",
-      "options": "Bank Account"
-    },
-    {
-      "fieldname": "default_business_bank_gl_account",
-      "fieldtype": "Link",
-      "label": "Default Business Bank GL Account",
-      "options": "Account",
-      "read_only": 1
-    },
-    {
-      "fieldname": "default_income_account",
-      "fieldtype": "Link",
-      "label": "Default Income Account",
-      "options": "Account"
-    },
-    {
-      "fieldname": "default_receivable_account",
-      "fieldtype": "Link",
-      "label": "Default Receivable Account",
-      "options": "Account"
-    },
-    {
-      "fieldname": "column_break_billing_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "default_disbursement_recovery_account",
-      "fieldtype": "Link",
-      "label": "Default Disbursement Recovery Account",
-      "options": "Account"
-    },
-    {
-      "fieldname": "default_write_off_account",
-      "fieldtype": "Link",
-      "label": "Default Write-Off Account",
-      "options": "Account"
-    },
-    {
-      "fieldname": "default_sales_taxes_and_charges_template",
-      "fieldtype": "Link",
-      "label": "Default Sales Taxes and Charges Template",
-      "options": "Sales Taxes and Charges Template"
-    },
-    {
-      "fieldname": "compliance_section",
-      "fieldtype": "Section Break",
-      "label": "Compliance and Approval Defaults"
-    },
-    {
-      "default": "1",
-      "fieldname": "require_conflict_check",
-      "fieldtype": "Check",
-      "label": "Require Conflict Check"
-    },
-    {
-      "default": "1",
-      "fieldname": "require_fica",
-      "fieldtype": "Check",
-      "label": "Require FICA"
-    },
-    {
-      "default": "1",
-      "fieldname": "require_mandate",
-      "fieldtype": "Check",
-      "label": "Require Mandate"
-    },
-    {
-      "fieldname": "column_break_compliance_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "trust_reconciliation_reviewer_role",
-      "fieldtype": "Link",
-      "label": "Trust Reconciliation Reviewer Role",
-      "options": "Role"
-    },
-    {
-      "fieldname": "matter_closing_approval_role",
-      "fieldtype": "Link",
-      "label": "Matter Closing Approval Role",
-      "options": "Role"
-    },
-    {
-      "fieldname": "invoice_approval_role",
-      "fieldtype": "Link",
-      "label": "Invoice Approval Role",
-      "options": "Role"
-    },
-    {
-      "fieldname": "numbering_section",
-      "fieldtype": "Section Break",
-      "label": "Matter Numbering and Workflow"
-    },
-    {
-      "fieldname": "matter_number_prefix",
-      "fieldtype": "Data",
-      "label": "Matter Number Prefix"
-    },
-    {
-      "default": "Enquiry",
-      "fieldname": "default_matter_status",
-      "fieldtype": "Select",
-      "label": "Default Matter Status",
-      "options": "Enquiry\nConflict Check\nFICA Pending\nMandate Pending\nOpen\nActive",
-      "reqd": 1
-    },
-    {
-      "fieldname": "default_matter_workflow",
-      "fieldtype": "Link",
-      "label": "Default Matter Workflow",
-      "options": "Workflow"
-    },
-    {
-      "fieldname": "column_break_numbering_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "0",
-      "fieldname": "sort_order",
-      "fieldtype": "Int",
-      "in_list_view": 1,
-      "label": "Sort Order"
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Small Text",
-      "label": "Notes"
-    }
-  ],
+  "general_section",
+  "naming_series",
+  "branch_name",
+  "branch_code",
+  "status",
+  "column_break_general_1",
+  "erpnext_branch",
+  "is_head_office",
+  "disabled",
+  "address_section",
+  "address",
+  "city",
+  "province",
+  "postal_code",
+  "column_break_address_1",
+  "country",
+  "phone",
+  "email",
+  "website",
+  "ownership_section",
+  "branch_manager",
+  "responsible_partner",
+  "default_attorney",
+  "column_break_ownership_1",
+  "default_practice_area",
+  "default_cost_center",
+  "default_warehouse",
+  "trust_accounting_section",
+  "default_trust_account",
+  "default_trust_bank_gl_account",
+  "default_trust_creditor_account",
+  "column_break_trust_1",
+  "require_trust_account_on_matter",
+  "allow_trust_receipts",
+  "allow_trust_payments",
+  "allow_trust_to_business_transfers",
+  "billing_section",
+  "default_business_bank_account",
+  "default_business_bank_gl_account",
+  "default_income_account",
+  "default_receivable_account",
+  "column_break_billing_1",
+  "default_disbursement_recovery_account",
+  "default_write_off_account",
+  "default_sales_taxes_and_charges_template",
+  "compliance_section",
+  "require_conflict_check",
+  "require_fica",
+  "require_mandate",
+  "column_break_compliance_1",
+  "trust_reconciliation_reviewer_role",
+  "matter_closing_approval_role",
+  "invoice_approval_role",
+  "numbering_section",
+  "matter_number_prefix",
+  "default_matter_status",
+  "default_matter_workflow",
+  "column_break_numbering_1",
+  "sort_order",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "default": "PBR-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PBR-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Branch Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "branch_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Branch Code",
+   "unique": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "erpnext_branch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "ERPNext Branch",
+   "options": "Branch"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_head_office",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Head Office"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "province",
+   "fieldtype": "Select",
+   "label": "Province",
+   "options": "\nEastern Cape\nFree State\nGauteng\nKwaZulu-Natal\nLimpopo\nMpumalanga\nNorthern Cape\nNorth West\nWestern Cape"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "column_break_address_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "South Africa",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "fieldname": "ownership_section",
+   "fieldtype": "Section Break",
+   "label": "Ownership and Defaults"
+  },
+  {
+   "fieldname": "branch_manager",
+   "fieldtype": "Link",
+   "label": "Branch Manager",
+   "options": "Attorney Profile"
+  },
+  {
+   "fieldname": "responsible_partner",
+   "fieldtype": "Link",
+   "label": "Responsible Partner",
+   "options": "Attorney Profile"
+  },
+  {
+   "fieldname": "default_attorney",
+   "fieldtype": "Link",
+   "label": "Default Attorney",
+   "options": "Attorney Profile"
+  },
+  {
+   "fieldname": "column_break_ownership_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_practice_area",
+   "fieldtype": "Link",
+   "label": "Default Practice Area",
+   "options": "Practice Area"
+  },
+  {
+   "fieldname": "default_cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "default_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "trust_accounting_section",
+   "fieldtype": "Section Break",
+   "label": "Trust Accounting Defaults"
+  },
+  {
+   "fieldname": "default_trust_account",
+   "fieldtype": "Link",
+   "label": "Default Trust Account",
+   "link_filters": "[[\"Bank Account\",\"za_lp_is_legal_trust_account\",\"=\",1],[\"Bank Account\",\"za_lp_trust_account_active\",\"=\",1]]",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "default_trust_bank_gl_account",
+   "fieldtype": "Link",
+   "label": "Default Trust Bank GL Account",
+   "options": "Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "default_trust_creditor_account",
+   "fieldtype": "Link",
+   "label": "Default Trust Creditor Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_trust_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "require_trust_account_on_matter",
+   "fieldtype": "Check",
+   "label": "Require Trust Account on Matter"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_trust_receipts",
+   "fieldtype": "Check",
+   "label": "Allow Trust Receipts"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_trust_payments",
+   "fieldtype": "Check",
+   "label": "Allow Trust Payments"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_trust_to_business_transfers",
+   "fieldtype": "Check",
+   "label": "Allow Trust-to-Business Transfers"
+  },
+  {
+   "fieldname": "billing_section",
+   "fieldtype": "Section Break",
+   "label": "Billing and Accounting Defaults"
+  },
+  {
+   "fieldname": "default_business_bank_account",
+   "fieldtype": "Link",
+   "label": "Default Business Bank Account",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "default_business_bank_gl_account",
+   "fieldtype": "Link",
+   "label": "Default Business Bank GL Account",
+   "options": "Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "default_income_account",
+   "fieldtype": "Link",
+   "label": "Default Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_receivable_account",
+   "fieldtype": "Link",
+   "label": "Default Receivable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_billing_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_disbursement_recovery_account",
+   "fieldtype": "Link",
+   "label": "Default Disbursement Recovery Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_write_off_account",
+   "fieldtype": "Link",
+   "label": "Default Write-Off Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_sales_taxes_and_charges_template",
+   "fieldtype": "Link",
+   "label": "Default Sales Taxes and Charges Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance and Approval Defaults"
+  },
+  {
+   "default": "1",
+   "fieldname": "require_conflict_check",
+   "fieldtype": "Check",
+   "label": "Require Conflict Check"
+  },
+  {
+   "default": "1",
+   "fieldname": "require_fica",
+   "fieldtype": "Check",
+   "label": "Require FICA"
+  },
+  {
+   "default": "1",
+   "fieldname": "require_mandate",
+   "fieldtype": "Check",
+   "label": "Require Mandate"
+  },
+  {
+   "fieldname": "column_break_compliance_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trust_reconciliation_reviewer_role",
+   "fieldtype": "Link",
+   "label": "Trust Reconciliation Reviewer Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "matter_closing_approval_role",
+   "fieldtype": "Link",
+   "label": "Matter Closing Approval Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "invoice_approval_role",
+   "fieldtype": "Link",
+   "label": "Invoice Approval Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "numbering_section",
+   "fieldtype": "Section Break",
+   "label": "Matter Numbering and Workflow"
+  },
+  {
+   "fieldname": "matter_number_prefix",
+   "fieldtype": "Data",
+   "label": "Matter Number Prefix"
+  },
+  {
+   "default": "Enquiry",
+   "fieldname": "default_matter_status",
+   "fieldtype": "Select",
+   "label": "Default Matter Status",
+   "options": "Enquiry\nConflict Check\nFICA Pending\nMandate Pending\nOpen\nActive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_matter_workflow",
+   "fieldtype": "Link",
+   "label": "Default Matter Workflow",
+   "options": "Workflow"
+  },
+  {
+   "fieldname": "column_break_numbering_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sort_order",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sort Order"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-16 19:02:00.237267",
+ "modified": "2026-06-16 19:50:59.087055",
  "modified_by": "Administrator",
  "module": "Practice Setup",
  "name": "Practice Branch",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "create": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Legal Practice Administrator",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "create": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Managing Partner",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Partner"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Attorney"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Trust Accounts Manager"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Compliance Officer"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Accounts User"
-    }
-  ],
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Practice Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Managing Partner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Partner"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Attorney"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Trust Accounts Manager"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Compliance Officer"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts User"
+  }
+ ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "sort_order",

@@ -39,7 +39,30 @@ fixtures = [
         "Paralegal Secretary",
         "Partner",
         "Trust Accounts Manager"
-	]]]}
+	]]]},
+    {"dt": "Custom Field", "filters": [["name", "in",[
+        "Bank Account-za_lp_legal_trust_account_section",
+        "Bank Account-za_lp_is_legal_trust_account",
+        "Bank Account-za_lp_trust_account_type",
+        "Bank Account-za_lp_trust_account_active",
+        "Bank Account-za_lp_trust_controls_column_break",
+        "Bank Account-za_lp_requires_dual_approval",
+        "Bank Account-za_lp_require_matter_dimension",
+        "Bank Account-za_lp_block_manual_posting",
+        "Bank Account-za_lp_trust_accounting_accounts_section",
+        "Bank Account-za_lp_trust_creditor_account",
+        "Bank Account-za_lp_trust_investment_account",
+        "Bank Account-za_lp_lpff_interest_account",
+        "Bank Account-za_lp_trust_accounts_column_break",
+        "Bank Account-za_lp_trust_bank_charges_account",
+        "Bank Account-za_lp_trust_rounding_difference_account",
+        "Bank Account-za_lp_trust_account_ownership_section",
+        "Bank Account-za_lp_responsible_attorney",
+        "Bank Account-za_lp_practice_branch",
+        "Bank Account-za_lp_practice_area",
+        "Bank Account-za_lp_trust_notes_column_break",
+        "Bank Account-za_lp_trust_account_notes"
+    ]]]}
 ]
 
 # Includes in <head>

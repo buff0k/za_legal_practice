@@ -3,500 +3,502 @@
  "allow_bulk_edit": 1,
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-06-16 18:40:01.702498",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-    "general_section",
-    "naming_series",
-    "user",
-    "attorney_name",
-    "status",
-    "column_break_general_1",
-    "attorney_code",
-    "attorney_type",
-    "is_admitted_attorney",
-    "is_candidate_attorney",
-    "professional_section",
-    "lpc_number",
-    "admission_date",
-    "right_of_appearance",
-    "right_of_appearance_date",
-    "column_break_professional_1",
-    "id_number",
-    "tax_number",
-    "vat_number",
-    "employment_section",
-    "enable_optional_employee_link",
-    "employee",
-    "hrms_installed",
-    "column_break_employment_1",
-    "branch",
-    "practice_area",
-    "cost_center",
-    "billing_section",
-    "default_hourly_rate",
-    "default_hourly_rate_item",
-    "default_consultation_item",
-    "column_break_billing_1",
-    "billing_approval_required",
-    "invoice_approval_role",
-    "trust_access_section",
-    "enforce_trust_account_restrictions",
-    "default_trust_account",
-    "default_trust_bank_gl_account",
-    "column_break_trust_access_1",
-    "can_capture_trust_receipts",
-    "can_request_trust_payments",
-    "can_approve_trust_payments",
-    "can_approve_trust_transfers",
-    "permitted_trust_accounts_section",
-    "permitted_trust_accounts",
-    "matter_access_section",
-    "restrict_to_own_matters",
-    "allow_shared_matter_team_access",
-    "default_matter_team_access_level",
-    "column_break_matter_access_1",
-    "can_open_matters",
-    "can_close_matters",
-    "can_override_matter_controls",
-    "compliance_section",
-    "can_override_fica",
-    "can_override_mandate",
-    "can_override_conflict",
-    "column_break_compliance_1",
-    "requires_supervision",
-    "supervising_attorney",
-    "contact_section",
-    "email",
-    "mobile_no",
-    "phone",
-    "column_break_contact_1",
-    "signature",
-    "signature_image",
-    "system_section",
-    "auto_create_user_permissions",
-    "last_user_permission_sync",
-    "disabled"
-  ],
-  "fields": [
-    {
-      "fieldname": "general_section",
-      "fieldtype": "Section Break",
-      "label": "General"
-    },
-    {
-      "default": "ATP-.YYYY.-.#####",
-      "fieldname": "naming_series",
-      "fieldtype": "Select",
-      "label": "Naming Series",
-      "options": "ATP-.YYYY.-.#####",
-      "reqd": 1
-    },
-    {
-      "fieldname": "user",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "User",
-      "options": "User",
-      "reqd": 1,
-      "unique": 1
-    },
-    {
-      "fieldname": "attorney_name",
-      "fieldtype": "Data",
-      "in_global_search": 1,
-      "in_list_view": 1,
-      "label": "Attorney Name",
-      "reqd": 1
-    },
-    {
-      "default": "Active",
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Status",
-      "options": "Active\nInactive\nSuspended\nLeft Practice",
-      "reqd": 1
-    },
-    {
-      "fieldname": "column_break_general_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "attorney_code",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Attorney Code",
-      "unique": 1
-    },
-    {
-      "default": "Attorney",
-      "fieldname": "attorney_type",
-      "fieldtype": "Select",
-      "in_standard_filter": 1,
-      "label": "Attorney Type",
-      "options": "Attorney\nPartner\nDirector\nCandidate Attorney\nConsultant\nExternal Counsel\nParalegal\nSecretary\nOther",
-      "reqd": 1
-    },
-    {
-      "default": "1",
-      "fieldname": "is_admitted_attorney",
-      "fieldtype": "Check",
-      "label": "Is Admitted Attorney"
-    },
-    {
-      "default": "0",
-      "fieldname": "is_candidate_attorney",
-      "fieldtype": "Check",
-      "label": "Is Candidate Attorney"
-    },
-    {
-      "fieldname": "professional_section",
-      "fieldtype": "Section Break",
-      "label": "Professional Details"
-    },
-    {
-      "fieldname": "lpc_number",
-      "fieldtype": "Data",
-      "label": "LPC Number"
-    },
-    {
-      "fieldname": "admission_date",
-      "fieldtype": "Date",
-      "label": "Admission Date"
-    },
-    {
-      "fieldname": "right_of_appearance",
-      "fieldtype": "Select",
-      "label": "Right of Appearance",
-      "options": "\nNone\nLower Courts\nHigh Court\nSuperior Courts"
-    },
-    {
-      "fieldname": "right_of_appearance_date",
-      "fieldtype": "Date",
-      "label": "Right of Appearance Date"
-    },
-    {
-      "fieldname": "column_break_professional_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "id_number",
-      "fieldtype": "Data",
-      "label": "ID Number"
-    },
-    {
-      "fieldname": "tax_number",
-      "fieldtype": "Data",
-      "label": "Tax Number"
-    },
-    {
-      "fieldname": "vat_number",
-      "fieldtype": "Data",
-      "label": "VAT Number"
-    },
-    {
-      "fieldname": "employment_section",
-      "fieldtype": "Section Break",
-      "label": "Employment / HRMS"
-    },
-    {
-      "default": "0",
-      "fieldname": "enable_optional_employee_link",
-      "fieldtype": "Check",
-      "label": "Enable Optional Employee Link"
-    },
-    {
-      "fieldname": "employee",
-      "fieldtype": "Link",
-      "label": "Employee",
-      "options": "Employee"
-    },
-    {
-      "default": "0",
-      "fieldname": "hrms_installed",
-      "fieldtype": "Check",
-      "label": "HRMS Installed",
-      "read_only": 1
-    },
-    {
-      "fieldname": "column_break_employment_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "branch",
-      "fieldtype": "Link",
-      "in_standard_filter": 1,
-      "label": "Branch",
-      "options": "Branch"
-    },
-    {
-      "fieldname": "practice_area",
-      "fieldtype": "Link",
-      "in_standard_filter": 1,
-      "label": "Practice Area",
-      "options": "Practice Area"
-    },
-    {
-      "fieldname": "cost_center",
-      "fieldtype": "Link",
-      "label": "Cost Center",
-      "options": "Cost Center"
-    },
-    {
-      "fieldname": "billing_section",
-      "fieldtype": "Section Break",
-      "label": "Billing"
-    },
-    {
-      "fieldname": "default_hourly_rate",
-      "fieldtype": "Currency",
-      "label": "Default Hourly Rate"
-    },
-    {
-      "fieldname": "default_hourly_rate_item",
-      "fieldtype": "Link",
-      "label": "Default Hourly Rate Item",
-      "options": "Item"
-    },
-    {
-      "fieldname": "default_consultation_item",
-      "fieldtype": "Link",
-      "label": "Default Consultation Item",
-      "options": "Item"
-    },
-    {
-      "fieldname": "column_break_billing_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "1",
-      "fieldname": "billing_approval_required",
-      "fieldtype": "Check",
-      "label": "Billing Approval Required"
-    },
-    {
-      "fieldname": "invoice_approval_role",
-      "fieldtype": "Link",
-      "label": "Invoice Approval Role",
-      "options": "Role"
-    },
-    {
-      "fieldname": "trust_access_section",
-      "fieldtype": "Section Break",
-      "label": "Trust Account Access"
-    },
-    {
-      "default": "1",
-      "fieldname": "enforce_trust_account_restrictions",
-      "fieldtype": "Check",
-      "label": "Enforce Trust Account Restrictions"
-    },
-    {
-      "fieldname": "default_trust_account",
-      "fieldtype": "Link",
-      "label": "Default Trust Account",
-      "options": "Bank Account"
-    },
-    {
-      "fieldname": "default_trust_bank_gl_account",
-      "fieldtype": "Link",
-      "label": "Default Trust Bank GL Account",
-      "options": "Account",
-      "read_only": 1
-    },
-    {
-      "fieldname": "column_break_trust_access_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "1",
-      "fieldname": "can_capture_trust_receipts",
-      "fieldtype": "Check",
-      "label": "Can Capture Trust Receipts"
-    },
-    {
-      "default": "1",
-      "fieldname": "can_request_trust_payments",
-      "fieldtype": "Check",
-      "label": "Can Request Trust Payments"
-    },
-    {
-      "default": "0",
-      "fieldname": "can_approve_trust_payments",
-      "fieldtype": "Check",
-      "label": "Can Approve Trust Payments"
-    },
-    {
-      "default": "0",
-      "fieldname": "can_approve_trust_transfers",
-      "fieldtype": "Check",
-      "label": "Can Approve Trust Transfers"
-    },
-    {
-      "fieldname": "permitted_trust_accounts_section",
-      "fieldtype": "Section Break",
-      "label": "Permitted Trust Accounts"
-    },
-    {
-      "fieldname": "permitted_trust_accounts",
-      "fieldtype": "Table",
-      "label": "Permitted Trust Accounts",
-      "options": "Attorney Trust Account Access"
-    },
-    {
-      "fieldname": "matter_access_section",
-      "fieldtype": "Section Break",
-      "label": "Matter Access"
-    },
-    {
-      "default": "1",
-      "fieldname": "restrict_to_own_matters",
-      "fieldtype": "Check",
-      "label": "Restrict to Own Matters"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_shared_matter_team_access",
-      "fieldtype": "Check",
-      "label": "Allow Shared Matter Team Access"
-    },
-    {
-      "default": "Write",
-      "fieldname": "default_matter_team_access_level",
-      "fieldtype": "Select",
-      "label": "Default Matter Team Access Level",
-      "options": "Read\nWrite\nBilling\nTrust Read\nTrust Write\nFull"
-    },
-    {
-      "fieldname": "column_break_matter_access_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "1",
-      "fieldname": "can_open_matters",
-      "fieldtype": "Check",
-      "label": "Can Open Matters"
-    },
-    {
-      "default": "0",
-      "fieldname": "can_close_matters",
-      "fieldtype": "Check",
-      "label": "Can Close Matters"
-    },
-    {
-      "default": "0",
-      "fieldname": "can_override_matter_controls",
-      "fieldtype": "Check",
-      "label": "Can Override Matter Controls"
-    },
-    {
-      "fieldname": "compliance_section",
-      "fieldtype": "Section Break",
-      "label": "Compliance Authority"
-    },
-    {
-      "default": "0",
-      "fieldname": "can_override_fica",
-      "fieldtype": "Check",
-      "label": "Can Override FICA"
-    },
-    {
-      "default": "0",
-      "fieldname": "can_override_mandate",
-      "fieldtype": "Check",
-      "label": "Can Override Mandate"
-    },
-    {
-      "default": "0",
-      "fieldname": "can_override_conflict",
-      "fieldtype": "Check",
-      "label": "Can Override Conflict"
-    },
-    {
-      "fieldname": "column_break_compliance_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "0",
-      "fieldname": "requires_supervision",
-      "fieldtype": "Check",
-      "label": "Requires Supervision"
-    },
-    {
-      "fieldname": "supervising_attorney",
-      "fieldtype": "Link",
-      "label": "Supervising Attorney",
-      "options": "Attorney Profile"
-    },
-    {
-      "fieldname": "contact_section",
-      "fieldtype": "Section Break",
-      "label": "Contact and Signature"
-    },
-    {
-      "fieldname": "email",
-      "fieldtype": "Data",
-      "label": "Email",
-      "options": "Email",
-      "read_only": 1
-    },
-    {
-      "fieldname": "mobile_no",
-      "fieldtype": "Data",
-      "label": "Mobile No"
-    },
-    {
-      "fieldname": "phone",
-      "fieldtype": "Data",
-      "label": "Phone"
-    },
-    {
-      "fieldname": "column_break_contact_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "signature",
-      "fieldtype": "Text Editor",
-      "label": "Signature"
-    },
-    {
-      "fieldname": "signature_image",
-      "fieldtype": "Attach Image",
-      "label": "Signature Image"
-    },
-    {
-      "fieldname": "system_section",
-      "fieldtype": "Section Break",
-      "label": "System"
-    },
-    {
-      "default": "1",
-      "fieldname": "auto_create_user_permissions",
-      "fieldtype": "Check",
-      "label": "Auto Create User Permissions"
-    },
-    {
-      "fieldname": "last_user_permission_sync",
-      "fieldtype": "Datetime",
-      "label": "Last User Permission Sync",
-      "read_only": 1
-    },
-    {
-      "default": "0",
-      "fieldname": "disabled",
-      "fieldtype": "Check",
-      "in_standard_filter": 1,
-      "label": "Disabled"
-    }
-  ],
+  "general_section",
+  "naming_series",
+  "user",
+  "attorney_name",
+  "status",
+  "column_break_general_1",
+  "attorney_code",
+  "attorney_type",
+  "is_admitted_attorney",
+  "is_candidate_attorney",
+  "professional_section",
+  "lpc_number",
+  "admission_date",
+  "right_of_appearance",
+  "right_of_appearance_date",
+  "column_break_professional_1",
+  "id_number",
+  "tax_number",
+  "vat_number",
+  "employment_section",
+  "enable_optional_employee_link",
+  "employee",
+  "hrms_installed",
+  "column_break_employment_1",
+  "branch",
+  "practice_area",
+  "cost_center",
+  "billing_section",
+  "default_hourly_rate",
+  "default_hourly_rate_item",
+  "default_consultation_item",
+  "column_break_billing_1",
+  "billing_approval_required",
+  "invoice_approval_role",
+  "trust_access_section",
+  "enforce_trust_account_restrictions",
+  "default_trust_account",
+  "default_trust_bank_gl_account",
+  "column_break_trust_access_1",
+  "can_capture_trust_receipts",
+  "can_request_trust_payments",
+  "can_approve_trust_payments",
+  "can_approve_trust_transfers",
+  "permitted_trust_accounts_section",
+  "permitted_trust_accounts",
+  "matter_access_section",
+  "restrict_to_own_matters",
+  "allow_shared_matter_team_access",
+  "default_matter_team_access_level",
+  "column_break_matter_access_1",
+  "can_open_matters",
+  "can_close_matters",
+  "can_override_matter_controls",
+  "compliance_section",
+  "can_override_fica",
+  "can_override_mandate",
+  "can_override_conflict",
+  "column_break_compliance_1",
+  "requires_supervision",
+  "supervising_attorney",
+  "contact_section",
+  "email",
+  "mobile_no",
+  "phone",
+  "column_break_contact_1",
+  "signature",
+  "signature_image",
+  "system_section",
+  "auto_create_user_permissions",
+  "last_user_permission_sync",
+  "disabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "default": "ATP-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "ATP-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "attorney_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Attorney Name",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nSuspended\nLeft Practice",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attorney_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attorney Code",
+   "unique": 1
+  },
+  {
+   "default": "Attorney",
+   "fieldname": "attorney_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Attorney Type",
+   "options": "Attorney\nPartner\nDirector\nCandidate Attorney\nConsultant\nExternal Counsel\nParalegal\nSecretary\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_admitted_attorney",
+   "fieldtype": "Check",
+   "label": "Is Admitted Attorney"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_candidate_attorney",
+   "fieldtype": "Check",
+   "label": "Is Candidate Attorney"
+  },
+  {
+   "fieldname": "professional_section",
+   "fieldtype": "Section Break",
+   "label": "Professional Details"
+  },
+  {
+   "fieldname": "lpc_number",
+   "fieldtype": "Data",
+   "label": "LPC Number"
+  },
+  {
+   "fieldname": "admission_date",
+   "fieldtype": "Date",
+   "label": "Admission Date"
+  },
+  {
+   "fieldname": "right_of_appearance",
+   "fieldtype": "Select",
+   "label": "Right of Appearance",
+   "options": "\nNone\nLower Courts\nHigh Court\nSuperior Courts"
+  },
+  {
+   "fieldname": "right_of_appearance_date",
+   "fieldtype": "Date",
+   "label": "Right of Appearance Date"
+  },
+  {
+   "fieldname": "column_break_professional_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "label": "ID Number"
+  },
+  {
+   "fieldname": "tax_number",
+   "fieldtype": "Data",
+   "label": "Tax Number"
+  },
+  {
+   "fieldname": "vat_number",
+   "fieldtype": "Data",
+   "label": "VAT Number"
+  },
+  {
+   "fieldname": "employment_section",
+   "fieldtype": "Section Break",
+   "label": "Employment / HRMS"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_optional_employee_link",
+   "fieldtype": "Check",
+   "label": "Enable Optional Employee Link"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "default": "0",
+   "fieldname": "hrms_installed",
+   "fieldtype": "Check",
+   "label": "HRMS Installed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_employment_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "practice_area",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Practice Area",
+   "options": "Practice Area"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "billing_section",
+   "fieldtype": "Section Break",
+   "label": "Billing"
+  },
+  {
+   "fieldname": "default_hourly_rate",
+   "fieldtype": "Currency",
+   "label": "Default Hourly Rate"
+  },
+  {
+   "fieldname": "default_hourly_rate_item",
+   "fieldtype": "Link",
+   "label": "Default Hourly Rate Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "default_consultation_item",
+   "fieldtype": "Link",
+   "label": "Default Consultation Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_billing_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "billing_approval_required",
+   "fieldtype": "Check",
+   "label": "Billing Approval Required"
+  },
+  {
+   "fieldname": "invoice_approval_role",
+   "fieldtype": "Link",
+   "label": "Invoice Approval Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "trust_access_section",
+   "fieldtype": "Section Break",
+   "label": "Trust Account Access"
+  },
+  {
+   "default": "1",
+   "fieldname": "enforce_trust_account_restrictions",
+   "fieldtype": "Check",
+   "label": "Enforce Trust Account Restrictions"
+  },
+  {
+   "fieldname": "default_trust_account",
+   "fieldtype": "Link",
+   "label": "Default Trust Account",
+   "link_filters": "[[\"Bank Account\",\"za_lp_is_legal_trust_account\",\"=\",1],[\"Bank Account\",\"za_lp_trust_account_active\",\"=\",1]]",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "default_trust_bank_gl_account",
+   "fieldtype": "Link",
+   "label": "Default Trust Bank GL Account",
+   "options": "Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_trust_access_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "can_capture_trust_receipts",
+   "fieldtype": "Check",
+   "label": "Can Capture Trust Receipts"
+  },
+  {
+   "default": "1",
+   "fieldname": "can_request_trust_payments",
+   "fieldtype": "Check",
+   "label": "Can Request Trust Payments"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_approve_trust_payments",
+   "fieldtype": "Check",
+   "label": "Can Approve Trust Payments"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_approve_trust_transfers",
+   "fieldtype": "Check",
+   "label": "Can Approve Trust Transfers"
+  },
+  {
+   "fieldname": "permitted_trust_accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Permitted Trust Accounts"
+  },
+  {
+   "fieldname": "permitted_trust_accounts",
+   "fieldtype": "Table",
+   "label": "Permitted Trust Accounts",
+   "options": "Attorney Trust Account Access"
+  },
+  {
+   "fieldname": "matter_access_section",
+   "fieldtype": "Section Break",
+   "label": "Matter Access"
+  },
+  {
+   "default": "1",
+   "fieldname": "restrict_to_own_matters",
+   "fieldtype": "Check",
+   "label": "Restrict to Own Matters"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_shared_matter_team_access",
+   "fieldtype": "Check",
+   "label": "Allow Shared Matter Team Access"
+  },
+  {
+   "default": "Write",
+   "fieldname": "default_matter_team_access_level",
+   "fieldtype": "Select",
+   "label": "Default Matter Team Access Level",
+   "options": "Read\nWrite\nBilling\nTrust Read\nTrust Write\nFull"
+  },
+  {
+   "fieldname": "column_break_matter_access_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "can_open_matters",
+   "fieldtype": "Check",
+   "label": "Can Open Matters"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_close_matters",
+   "fieldtype": "Check",
+   "label": "Can Close Matters"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_override_matter_controls",
+   "fieldtype": "Check",
+   "label": "Can Override Matter Controls"
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance Authority"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_override_fica",
+   "fieldtype": "Check",
+   "label": "Can Override FICA"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_override_mandate",
+   "fieldtype": "Check",
+   "label": "Can Override Mandate"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_override_conflict",
+   "fieldtype": "Check",
+   "label": "Can Override Conflict"
+  },
+  {
+   "fieldname": "column_break_compliance_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_supervision",
+   "fieldtype": "Check",
+   "label": "Requires Supervision"
+  },
+  {
+   "fieldname": "supervising_attorney",
+   "fieldtype": "Link",
+   "label": "Supervising Attorney",
+   "options": "Attorney Profile"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact and Signature"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "column_break_contact_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Text Editor",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "signature_image",
+   "fieldtype": "Attach Image",
+   "label": "Signature Image"
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_create_user_permissions",
+   "fieldtype": "Check",
+   "label": "Auto Create User Permissions"
+  },
+  {
+   "fieldname": "last_user_permission_sync",
+   "fieldtype": "Datetime",
+   "label": "Last User Permission Sync",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Disabled"
+  }
+ ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-16 18:42:00.084356",
+ "modified": "2026-06-16 19:48:53.053632",
  "modified_by": "Administrator",
  "module": "Practice Setup",
  "name": "Attorney Profile",
@@ -514,48 +516,48 @@
    "share": 1,
    "write": 1
   },
-    {
-      "create": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Legal Practice Administrator",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "create": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Managing Partner",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Partner"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Trust Accounts Manager"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Compliance Officer"
-    }
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Practice Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Managing Partner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Partner"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Trust Accounts Manager"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Compliance Officer"
+  }
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
