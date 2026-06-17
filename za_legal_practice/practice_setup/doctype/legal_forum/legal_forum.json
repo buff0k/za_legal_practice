@@ -1,0 +1,399 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-06-17 15:31:37.025909",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+    "general_section",
+    "naming_series",
+    "forum_name",
+    "forum_code",
+    "status",
+    "column_break_general_1",
+    "forum_type",
+    "forum_level",
+    "jurisdiction_level",
+    "disabled",
+    "location_section",
+    "province",
+    "city",
+    "seat_type",
+    "column_break_location_1",
+    "division",
+    "branch_name",
+    "court_code",
+    "matter_defaults_section",
+    "default_party_role",
+    "appears_on_court_documents",
+    "is_default_for_type",
+    "column_break_matter_defaults_1",
+    "default_matter_stage",
+    "default_matter_status",
+    "scope_section",
+    "practice_area",
+    "matter_type",
+    "applies_to_all_matter_types",
+    "contact_section",
+    "phone",
+    "email",
+    "website",
+    "column_break_contact_1",
+    "address",
+    "source_section",
+    "source_url",
+    "source_verified_on",
+    "notes_section",
+    "notes",
+    "system_section",
+    "sort_order"
+  ],
+  "fields": [
+    {
+      "fieldname": "general_section",
+      "fieldtype": "Section Break",
+      "label": "General"
+    },
+    {
+      "default": "LFO-.#####",
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "LFO-.#####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "forum_name",
+      "fieldtype": "Data",
+      "in_global_search": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Forum Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "forum_code",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Forum Code",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Active\nInactive\nArchived",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_general_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Other",
+      "fieldname": "forum_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Forum Type",
+      "options": "Constitutional Court\nSupreme Court of Appeal\nHigh Court\nLabour Court\nLabour Appeal Court\nLand Court\nLand Claims Court\nElectoral Court\nCompetition Tribunal\nCompetition Appeal Court\nTax Court\nConsumer Tribunal\nCompanies Tribunal\nEquality Court\nSmall Claims Court\nMaintenance Court\nChildren's Court\nDivorce Court\nRegional Magistrates Court\nDistrict Magistrates Court\nCCMA\nBargaining Council\nArbitration Forum\nMediation Forum\nTribunal\nOther",
+      "reqd": 1
+    },
+    {
+      "default": "Other",
+      "fieldname": "forum_level",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Forum Level",
+      "options": "Apex Court\nAppeal Court\nSuperior Court\nSpecialist Court\nLower Court\nCommission / Tribunal\nTribunal\nForum\nOther",
+      "reqd": 1
+    },
+    {
+      "default": "National",
+      "fieldname": "jurisdiction_level",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Jurisdiction Level",
+      "options": "National\nProvincial\nRegional\nDistrict\nDistrict / Local\nPrivate\nOther",
+      "reqd": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "disabled",
+      "fieldtype": "Check",
+      "in_standard_filter": 1,
+      "label": "Disabled"
+    },
+    {
+      "fieldname": "location_section",
+      "fieldtype": "Section Break",
+      "label": "Location"
+    },
+    {
+      "fieldname": "province",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Province",
+      "options": "\nEastern Cape\nFree State\nGauteng\nKwaZulu-Natal\nLimpopo\nMpumalanga\nNorth West\nNorthern Cape\nWestern Cape"
+    },
+    {
+      "fieldname": "city",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "City / Town"
+    },
+    {
+      "fieldname": "seat_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Seat Type",
+      "options": "\nSeat\nMain Seat\nLocal Seat\nCircuit Court\nNational Office\nProvincial Office\nDesignated Court\nProvincial Regional Division\nDistrict Courts\nNational\nOther"
+    },
+    {
+      "fieldname": "column_break_location_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "division",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Division"
+    },
+    {
+      "fieldname": "branch_name",
+      "fieldtype": "Data",
+      "label": "Branch Name"
+    },
+    {
+      "fieldname": "court_code",
+      "fieldtype": "Data",
+      "label": "External Court Code"
+    },
+    {
+      "fieldname": "matter_defaults_section",
+      "fieldtype": "Section Break",
+      "label": "Matter Defaults"
+    },
+    {
+      "fieldname": "default_party_role",
+      "fieldtype": "Link",
+      "label": "Default Party Role",
+      "options": "Legal Party Role"
+    },
+    {
+      "default": "1",
+      "fieldname": "appears_on_court_documents",
+      "fieldtype": "Check",
+      "label": "Appears on Court Documents"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_default_for_type",
+      "fieldtype": "Check",
+      "label": "Is Default for Type"
+    },
+    {
+      "fieldname": "column_break_matter_defaults_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "default_matter_stage",
+      "fieldtype": "Link",
+      "label": "Default Matter Stage",
+      "options": "Matter Stage"
+    },
+    {
+      "fieldname": "default_matter_status",
+      "fieldtype": "Select",
+      "label": "Default Matter Status",
+      "options": "\nEnquiry\nConflict Check\nFICA Pending\nMandate Pending\nOpen\nActive\nSuspended\nClosing\nClosed\nCancelled"
+    },
+    {
+      "fieldname": "scope_section",
+      "fieldtype": "Section Break",
+      "label": "Scope"
+    },
+    {
+      "fieldname": "practice_area",
+      "fieldtype": "Link",
+      "label": "Practice Area",
+      "options": "Practice Area"
+    },
+    {
+      "fieldname": "matter_type",
+      "fieldtype": "Link",
+      "label": "Matter Type",
+      "options": "Matter Type"
+    },
+    {
+      "default": "1",
+      "fieldname": "applies_to_all_matter_types",
+      "fieldtype": "Check",
+      "label": "Applies to All Matter Types"
+    },
+    {
+      "fieldname": "contact_section",
+      "fieldtype": "Section Break",
+      "label": "Contact Details"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "website",
+      "fieldtype": "Data",
+      "label": "Website"
+    },
+    {
+      "fieldname": "column_break_contact_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "source_section",
+      "fieldtype": "Section Break",
+      "label": "Source / Verification"
+    },
+    {
+      "fieldname": "source_url",
+      "fieldtype": "Data",
+      "label": "Source URL"
+    },
+    {
+      "fieldname": "source_verified_on",
+      "fieldtype": "Date",
+      "label": "Source Verified On"
+    },
+    {
+      "fieldname": "notes_section",
+      "fieldtype": "Section Break",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "system_section",
+      "fieldtype": "Section Break",
+      "label": "System"
+    },
+    {
+      "default": "0",
+      "fieldname": "sort_order",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Sort Order"
+    }
+  ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-17 15:35:39.310631",
+ "modified_by": "Administrator",
+ "module": "Practice Setup",
+ "name": "Legal Forum",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Legal Practice Administrator",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Managing Partner",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Partner"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Attorney"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Candidate Attorney"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Paralegal"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Legal Secretary"
+    }
+  ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "sort_order",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "forum_name",
+ "track_changes": 1
+}
