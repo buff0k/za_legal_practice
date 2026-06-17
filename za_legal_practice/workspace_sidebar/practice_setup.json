@@ -8,6 +8,7 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "setting",
    "indent": 0,
    "keep_closed": 0,
    "label": "Legal Practice Settings",
@@ -19,6 +20,7 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "person-standing",
    "indent": 0,
    "keep_closed": 0,
    "label": "Attorney Profile",
@@ -30,6 +32,7 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "speech",
    "indent": 0,
    "keep_closed": 0,
    "label": "Practice Area",
@@ -41,6 +44,7 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "branch",
    "indent": 0,
    "keep_closed": 0,
    "label": "Practice Branch",
@@ -52,6 +56,7 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "book-type",
    "indent": 0,
    "keep_closed": 0,
    "label": "Matter Type",
@@ -63,6 +68,7 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "square-stack",
    "indent": 0,
    "keep_closed": 0,
    "label": "Matter Stage",
@@ -74,6 +80,7 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "tower-control",
    "indent": 0,
    "keep_closed": 0,
    "label": "Legal Party Role",
@@ -85,6 +92,7 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "hammer",
    "indent": 0,
    "keep_closed": 0,
    "label": "Legal Forum",
@@ -94,7 +102,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-17 15:31:49.367104",
+ "modified": "2026-06-17 15:43:05.787344",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Practice Setup",
