@@ -62,6 +62,21 @@ fixtures = [
         "Bank Account-za_lp_practice_area",
         "Bank Account-za_lp_trust_notes_column_break",
         "Bank Account-za_lp_trust_account_notes"
+    ]]]},
+    {"dt": "Matter Stage", "filters": [["name", "in", [
+        "ENQUIRY",
+        "CONFLICT_CHECK",
+        "FICA_MANDATE",
+        "MATTER_OPENING",
+        "INITIAL_CONSULTATION",
+        "INVESTIGATION",
+        "DRAFTING",
+        "FILING_LODGEMENT",
+        "NEGOTIATION",
+        "HEARING_APPEARANCE",
+        "SETTLEMENT_FINALISATION",
+        "BILLING_TRUST_FINALISATION",
+        "CLOSED"
     ]]]}
 ]
 

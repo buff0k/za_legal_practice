@@ -1,472 +1,473 @@
 {
  "actions": [],
  "allow_bulk_edit": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2026-06-17 14:56:56.692236",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-    "general_section",
-    "naming_series",
-    "stage_name",
-    "stage_code",
-    "status",
-    "column_break_general_1",
-    "practice_area",
-    "matter_type",
-    "applies_to_all_matter_types",
-    "disabled",
-    "description_section",
-    "description",
-    "ordering_section",
-    "sort_order",
-    "is_initial_stage",
-    "is_default_stage",
-    "column_break_ordering_1",
-    "is_closing_stage",
-    "is_closed_stage",
-    "target_days",
-    "workflow_mapping_section",
-    "mapped_matter_status",
-    "requires_workflow_state",
-    "column_break_workflow_mapping_1",
-    "next_stage",
-    "previous_stage",
-    "compliance_gate_section",
-    "require_conflict_check_complete",
-    "require_fica_complete",
-    "require_mandate_signed",
-    "require_required_documents_complete",
-    "column_break_compliance_gate_1",
-    "require_partner_approval",
-    "approval_role",
-    "trust_controls_section",
-    "allow_trust_receipts",
-    "allow_trust_payments",
-    "allow_trust_to_business_transfers",
-    "column_break_trust_controls_1",
-    "require_trust_balance_zero",
-    "prevent_trust_activity",
-    "billing_controls_section",
-    "allow_time_entries",
-    "allow_disbursements",
-    "allow_billing",
-    "column_break_billing_controls_1",
-    "require_unbilled_time_clear",
-    "require_unbilled_disbursements_clear",
-    "task_controls_section",
-    "auto_create_stage_tasks",
-    "require_open_tasks_complete",
-    "column_break_task_controls_1",
-    "escalation_role",
-    "warning_days_before_target",
-    "system_section",
-    "notes"
-  ],
-  "fields": [
-    {
-      "fieldname": "general_section",
-      "fieldtype": "Section Break",
-      "label": "General"
-    },
-    {
-      "default": "MST-.#####",
-      "fieldname": "naming_series",
-      "fieldtype": "Select",
-      "label": "Naming Series",
-      "options": "MST-.#####",
-      "reqd": 1
-    },
-    {
-      "fieldname": "stage_name",
-      "fieldtype": "Data",
-      "in_global_search": 1,
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Stage Name",
-      "reqd": 1
-    },
-    {
-      "fieldname": "stage_code",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Stage Code",
-      "reqd": 1,
-      "unique": 1
-    },
-    {
-      "default": "Active",
-      "fieldname": "status",
-      "fieldtype": "Select",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Status",
-      "options": "Active\nInactive\nArchived",
-      "reqd": 1
-    },
-    {
-      "fieldname": "column_break_general_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "practice_area",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Practice Area",
-      "options": "Practice Area"
-    },
-    {
-      "fieldname": "matter_type",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Matter Type",
-      "options": "Matter Type"
-    },
-    {
-      "default": "1",
-      "fieldname": "applies_to_all_matter_types",
-      "fieldtype": "Check",
-      "label": "Applies to All Matter Types"
-    },
-    {
-      "default": "0",
-      "fieldname": "disabled",
-      "fieldtype": "Check",
-      "in_standard_filter": 1,
-      "label": "Disabled"
-    },
-    {
-      "fieldname": "description_section",
-      "fieldtype": "Section Break",
-      "label": "Description"
-    },
-    {
-      "fieldname": "description",
-      "fieldtype": "Small Text",
-      "label": "Description"
-    },
-    {
-      "fieldname": "ordering_section",
-      "fieldtype": "Section Break",
-      "label": "Ordering and Defaults"
-    },
-    {
-      "default": "0",
-      "fieldname": "sort_order",
-      "fieldtype": "Int",
-      "in_list_view": 1,
-      "label": "Sort Order"
-    },
-    {
-      "default": "0",
-      "fieldname": "is_initial_stage",
-      "fieldtype": "Check",
-      "in_list_view": 1,
-      "label": "Is Initial Stage"
-    },
-    {
-      "default": "0",
-      "fieldname": "is_default_stage",
-      "fieldtype": "Check",
-      "in_list_view": 1,
-      "label": "Is Default Stage"
-    },
-    {
-      "fieldname": "column_break_ordering_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "0",
-      "fieldname": "is_closing_stage",
-      "fieldtype": "Check",
-      "label": "Is Closing Stage"
-    },
-    {
-      "default": "0",
-      "fieldname": "is_closed_stage",
-      "fieldtype": "Check",
-      "label": "Is Closed Stage"
-    },
-    {
-      "default": "0",
-      "fieldname": "target_days",
-      "fieldtype": "Int",
-      "label": "Target Days"
-    },
-    {
-      "fieldname": "workflow_mapping_section",
-      "fieldtype": "Section Break",
-      "label": "Workflow Mapping"
-    },
-    {
-      "fieldname": "mapped_matter_status",
-      "fieldtype": "Select",
-      "label": "Mapped Matter Status",
-      "options": "\nEnquiry\nConflict Check\nFICA Pending\nMandate Pending\nOpen\nActive\nSuspended\nClosing\nClosed\nCancelled"
-    },
-    {
-      "fieldname": "requires_workflow_state",
-      "fieldtype": "Data",
-      "label": "Requires Workflow State"
-    },
-    {
-      "fieldname": "column_break_workflow_mapping_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "next_stage",
-      "fieldtype": "Link",
-      "label": "Next Stage",
-      "options": "Matter Stage"
-    },
-    {
-      "fieldname": "previous_stage",
-      "fieldtype": "Link",
-      "label": "Previous Stage",
-      "options": "Matter Stage"
-    },
-    {
-      "fieldname": "compliance_gate_section",
-      "fieldtype": "Section Break",
-      "label": "Compliance Gates"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_conflict_check_complete",
-      "fieldtype": "Check",
-      "label": "Require Conflict Check Complete"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_fica_complete",
-      "fieldtype": "Check",
-      "label": "Require FICA Complete"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_mandate_signed",
-      "fieldtype": "Check",
-      "label": "Require Mandate Signed"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_required_documents_complete",
-      "fieldtype": "Check",
-      "label": "Require Required Documents Complete"
-    },
-    {
-      "fieldname": "column_break_compliance_gate_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_partner_approval",
-      "fieldtype": "Check",
-      "label": "Require Partner Approval"
-    },
-    {
-      "fieldname": "approval_role",
-      "fieldtype": "Link",
-      "label": "Approval Role",
-      "options": "Role"
-    },
-    {
-      "fieldname": "trust_controls_section",
-      "fieldtype": "Section Break",
-      "label": "Trust Controls"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_trust_receipts",
-      "fieldtype": "Check",
-      "label": "Allow Trust Receipts"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_trust_payments",
-      "fieldtype": "Check",
-      "label": "Allow Trust Payments"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_trust_to_business_transfers",
-      "fieldtype": "Check",
-      "label": "Allow Trust-to-Business Transfers"
-    },
-    {
-      "fieldname": "column_break_trust_controls_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_trust_balance_zero",
-      "fieldtype": "Check",
-      "label": "Require Trust Balance Zero"
-    },
-    {
-      "default": "0",
-      "fieldname": "prevent_trust_activity",
-      "fieldtype": "Check",
-      "label": "Prevent Trust Activity"
-    },
-    {
-      "fieldname": "billing_controls_section",
-      "fieldtype": "Section Break",
-      "label": "Billing Controls"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_time_entries",
-      "fieldtype": "Check",
-      "label": "Allow Time Entries"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_disbursements",
-      "fieldtype": "Check",
-      "label": "Allow Disbursements"
-    },
-    {
-      "default": "1",
-      "fieldname": "allow_billing",
-      "fieldtype": "Check",
-      "label": "Allow Billing"
-    },
-    {
-      "fieldname": "column_break_billing_controls_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_unbilled_time_clear",
-      "fieldtype": "Check",
-      "label": "Require Unbilled Time Clear"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_unbilled_disbursements_clear",
-      "fieldtype": "Check",
-      "label": "Require Unbilled Disbursements Clear"
-    },
-    {
-      "fieldname": "task_controls_section",
-      "fieldtype": "Section Break",
-      "label": "Task Controls"
-    },
-    {
-      "default": "1",
-      "fieldname": "auto_create_stage_tasks",
-      "fieldtype": "Check",
-      "label": "Auto Create Stage Tasks"
-    },
-    {
-      "default": "0",
-      "fieldname": "require_open_tasks_complete",
-      "fieldtype": "Check",
-      "label": "Require Open Tasks Complete"
-    },
-    {
-      "fieldname": "column_break_task_controls_1",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "escalation_role",
-      "fieldtype": "Link",
-      "label": "Escalation Role",
-      "options": "Role"
-    },
-    {
-      "default": "0",
-      "fieldname": "warning_days_before_target",
-      "fieldtype": "Int",
-      "label": "Warning Days Before Target"
-    },
-    {
-      "fieldname": "system_section",
-      "fieldtype": "Section Break",
-      "label": "System"
-    },
-    {
-      "fieldname": "notes",
-      "fieldtype": "Small Text",
-      "label": "Notes"
-    }
-  ],
+  "general_section",
+  "naming_series",
+  "stage_name",
+  "stage_code",
+  "status",
+  "column_break_general_1",
+  "practice_area",
+  "matter_type",
+  "applies_to_all_matter_types",
+  "disabled",
+  "description_section",
+  "description",
+  "ordering_section",
+  "sort_order",
+  "is_initial_stage",
+  "is_default_stage",
+  "column_break_ordering_1",
+  "is_closing_stage",
+  "is_closed_stage",
+  "target_days",
+  "workflow_mapping_section",
+  "mapped_matter_status",
+  "requires_workflow_state",
+  "column_break_workflow_mapping_1",
+  "next_stage",
+  "previous_stage",
+  "compliance_gate_section",
+  "require_conflict_check_complete",
+  "require_fica_complete",
+  "require_mandate_signed",
+  "require_required_documents_complete",
+  "column_break_compliance_gate_1",
+  "require_partner_approval",
+  "approval_role",
+  "trust_controls_section",
+  "allow_trust_receipts",
+  "allow_trust_payments",
+  "allow_trust_to_business_transfers",
+  "column_break_trust_controls_1",
+  "require_trust_balance_zero",
+  "prevent_trust_activity",
+  "billing_controls_section",
+  "allow_time_entries",
+  "allow_disbursements",
+  "allow_billing",
+  "column_break_billing_controls_1",
+  "require_unbilled_time_clear",
+  "require_unbilled_disbursements_clear",
+  "task_controls_section",
+  "auto_create_stage_tasks",
+  "require_open_tasks_complete",
+  "column_break_task_controls_1",
+  "escalation_role",
+  "warning_days_before_target",
+  "system_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "default": "MST-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "MST-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stage_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Stage Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stage_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Stage Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "practice_area",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Practice Area",
+   "options": "Practice Area"
+  },
+  {
+   "fieldname": "matter_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Matter Type",
+   "options": "Matter Type"
+  },
+  {
+   "default": "1",
+   "fieldname": "applies_to_all_matter_types",
+   "fieldtype": "Check",
+   "label": "Applies to All Matter Types"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "ordering_section",
+   "fieldtype": "Section Break",
+   "label": "Ordering and Defaults"
+  },
+  {
+   "default": "0",
+   "fieldname": "sort_order",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sort Order"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_initial_stage",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Initial Stage"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default_stage",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Default Stage"
+  },
+  {
+   "fieldname": "column_break_ordering_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_closing_stage",
+   "fieldtype": "Check",
+   "label": "Is Closing Stage"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_closed_stage",
+   "fieldtype": "Check",
+   "label": "Is Closed Stage"
+  },
+  {
+   "default": "0",
+   "fieldname": "target_days",
+   "fieldtype": "Int",
+   "label": "Target Days"
+  },
+  {
+   "fieldname": "workflow_mapping_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow Mapping"
+  },
+  {
+   "fieldname": "mapped_matter_status",
+   "fieldtype": "Select",
+   "label": "Mapped Matter Status",
+   "options": "\nEnquiry\nConflict Check\nFICA Pending\nMandate Pending\nOpen\nActive\nSuspended\nClosing\nClosed\nCancelled"
+  },
+  {
+   "fieldname": "requires_workflow_state",
+   "fieldtype": "Data",
+   "label": "Requires Workflow State"
+  },
+  {
+   "fieldname": "column_break_workflow_mapping_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_stage",
+   "fieldtype": "Link",
+   "label": "Next Stage",
+   "options": "Matter Stage"
+  },
+  {
+   "fieldname": "previous_stage",
+   "fieldtype": "Link",
+   "label": "Previous Stage",
+   "options": "Matter Stage"
+  },
+  {
+   "fieldname": "compliance_gate_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance Gates"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_conflict_check_complete",
+   "fieldtype": "Check",
+   "label": "Require Conflict Check Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_fica_complete",
+   "fieldtype": "Check",
+   "label": "Require FICA Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_mandate_signed",
+   "fieldtype": "Check",
+   "label": "Require Mandate Signed"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_required_documents_complete",
+   "fieldtype": "Check",
+   "label": "Require Required Documents Complete"
+  },
+  {
+   "fieldname": "column_break_compliance_gate_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_partner_approval",
+   "fieldtype": "Check",
+   "label": "Require Partner Approval"
+  },
+  {
+   "fieldname": "approval_role",
+   "fieldtype": "Link",
+   "label": "Approval Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "trust_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Trust Controls"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_trust_receipts",
+   "fieldtype": "Check",
+   "label": "Allow Trust Receipts"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_trust_payments",
+   "fieldtype": "Check",
+   "label": "Allow Trust Payments"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_trust_to_business_transfers",
+   "fieldtype": "Check",
+   "label": "Allow Trust-to-Business Transfers"
+  },
+  {
+   "fieldname": "column_break_trust_controls_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_trust_balance_zero",
+   "fieldtype": "Check",
+   "label": "Require Trust Balance Zero"
+  },
+  {
+   "default": "0",
+   "fieldname": "prevent_trust_activity",
+   "fieldtype": "Check",
+   "label": "Prevent Trust Activity"
+  },
+  {
+   "fieldname": "billing_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Controls"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_time_entries",
+   "fieldtype": "Check",
+   "label": "Allow Time Entries"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_disbursements",
+   "fieldtype": "Check",
+   "label": "Allow Disbursements"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_billing",
+   "fieldtype": "Check",
+   "label": "Allow Billing"
+  },
+  {
+   "fieldname": "column_break_billing_controls_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_unbilled_time_clear",
+   "fieldtype": "Check",
+   "label": "Require Unbilled Time Clear"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_unbilled_disbursements_clear",
+   "fieldtype": "Check",
+   "label": "Require Unbilled Disbursements Clear"
+  },
+  {
+   "fieldname": "task_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Task Controls"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_create_stage_tasks",
+   "fieldtype": "Check",
+   "label": "Auto Create Stage Tasks"
+  },
+  {
+   "default": "0",
+   "fieldname": "require_open_tasks_complete",
+   "fieldtype": "Check",
+   "label": "Require Open Tasks Complete"
+  },
+  {
+   "fieldname": "column_break_task_controls_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "escalation_role",
+   "fieldtype": "Link",
+   "label": "Escalation Role",
+   "options": "Role"
+  },
+  {
+   "default": "0",
+   "fieldname": "warning_days_before_target",
+   "fieldtype": "Int",
+   "label": "Warning Days Before Target"
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-17 15:00:01.277117",
+ "modified": "2026-06-17 15:09:57.103005",
  "modified_by": "Administrator",
  "module": "Practice Setup",
  "name": "Matter Stage",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "create": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Legal Practice Administrator",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "create": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Managing Partner",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "Partner"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Attorney"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Candidate Attorney"
-    },
-    {
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "Paralegal"
-    }
-  ],
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Practice Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Managing Partner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Partner"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Attorney"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Candidate Attorney"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Paralegal"
+  }
+ ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "sort_order",
