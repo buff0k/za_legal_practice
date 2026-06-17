@@ -1,0 +1,565 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-06-17 15:19:53.549187",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+    "general_section",
+    "naming_series",
+    "role_name",
+    "role_code",
+    "status",
+    "column_break_general_1",
+    "role_category",
+    "party_side",
+    "disabled",
+    "description_section",
+    "description",
+    "scope_section",
+    "practice_area",
+    "matter_type",
+    "applies_to_all_matter_types",
+    "column_break_scope_1",
+    "is_standard_role",
+    "is_default_for_category",
+    "sort_order",
+    "party_behavior_section",
+    "can_be_client",
+    "can_be_opposing_party",
+    "can_be_third_party",
+    "can_be_professional_party",
+    "column_break_party_behavior_1",
+    "can_be_court_or_forum",
+    "can_be_state_entity",
+    "can_be_internal_party",
+    "can_be_related_party",
+    "matter_controls_section",
+    "required_on_matter",
+    "allow_multiple_parties",
+    "include_in_conflict_check",
+    "include_in_fica_check",
+    "column_break_matter_controls_1",
+    "include_in_documents",
+    "include_in_billing",
+    "include_in_service_list",
+    "requires_contact_details",
+    "compliance_controls_section",
+    "requires_fica",
+    "requires_id_or_registration_number",
+    "requires_address",
+    "column_break_compliance_controls_1",
+    "requires_mandate",
+    "requires_power_of_attorney",
+    "requires_capacity_description",
+    "litigation_section",
+    "litigation_role_type",
+    "court_side",
+    "column_break_litigation_1",
+    "is_primary_litigation_party",
+    "appears_on_court_documents",
+    "conveyancing_section",
+    "conveyancing_role_type",
+    "is_primary_conveyancing_party",
+    "column_break_conveyancing_1",
+    "requires_property_interest",
+    "requires_signing_capacity",
+    "collections_section",
+    "collections_role_type",
+    "is_debtor_role",
+    "column_break_collections_1",
+    "is_creditor_role",
+    "is_surety_role",
+    "system_section",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "general_section",
+      "fieldtype": "Section Break",
+      "label": "General"
+    },
+    {
+      "default": "LPR-.#####",
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "LPR-.#####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "role_name",
+      "fieldtype": "Data",
+      "in_global_search": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Role Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "role_code",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Role Code",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "default": "Active",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Active\nInactive\nArchived",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_general_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "General",
+      "fieldname": "role_category",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Role Category",
+      "options": "General\nClient\nOpposing Party\nThird Party\nProfessional\nCourt / Forum\nState Entity\nInternal\nLitigation\nConveyancing\nCollections\nEstate\nFamily Law\nCriminal Law\nCommercial\nOther",
+      "reqd": 1
+    },
+    {
+      "default": "Neutral",
+      "fieldname": "party_side",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Party Side",
+      "options": "Neutral\nClient Side\nOpposing Side\nThird Party\nCourt / Forum\nInternal",
+      "reqd": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "disabled",
+      "fieldtype": "Check",
+      "in_standard_filter": 1,
+      "label": "Disabled"
+    },
+    {
+      "fieldname": "description_section",
+      "fieldtype": "Section Break",
+      "label": "Description"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "scope_section",
+      "fieldtype": "Section Break",
+      "label": "Scope"
+    },
+    {
+      "fieldname": "practice_area",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Practice Area",
+      "options": "Practice Area"
+    },
+    {
+      "fieldname": "matter_type",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Matter Type",
+      "options": "Matter Type"
+    },
+    {
+      "default": "1",
+      "fieldname": "applies_to_all_matter_types",
+      "fieldtype": "Check",
+      "label": "Applies to All Matter Types"
+    },
+    {
+      "fieldname": "column_break_scope_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "is_standard_role",
+      "fieldtype": "Check",
+      "label": "Is Standard Role"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_default_for_category",
+      "fieldtype": "Check",
+      "label": "Is Default for Category"
+    },
+    {
+      "default": "0",
+      "fieldname": "sort_order",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Sort Order"
+    },
+    {
+      "fieldname": "party_behavior_section",
+      "fieldtype": "Section Break",
+      "label": "Party Behaviour"
+    },
+    {
+      "default": "0",
+      "fieldname": "can_be_client",
+      "fieldtype": "Check",
+      "label": "Can Be Client"
+    },
+    {
+      "default": "0",
+      "fieldname": "can_be_opposing_party",
+      "fieldtype": "Check",
+      "label": "Can Be Opposing Party"
+    },
+    {
+      "default": "1",
+      "fieldname": "can_be_third_party",
+      "fieldtype": "Check",
+      "label": "Can Be Third Party"
+    },
+    {
+      "default": "0",
+      "fieldname": "can_be_professional_party",
+      "fieldtype": "Check",
+      "label": "Can Be Professional Party"
+    },
+    {
+      "fieldname": "column_break_party_behavior_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "can_be_court_or_forum",
+      "fieldtype": "Check",
+      "label": "Can Be Court or Forum"
+    },
+    {
+      "default": "0",
+      "fieldname": "can_be_state_entity",
+      "fieldtype": "Check",
+      "label": "Can Be State Entity"
+    },
+    {
+      "default": "0",
+      "fieldname": "can_be_internal_party",
+      "fieldtype": "Check",
+      "label": "Can Be Internal Party"
+    },
+    {
+      "default": "0",
+      "fieldname": "can_be_related_party",
+      "fieldtype": "Check",
+      "label": "Can Be Related Party"
+    },
+    {
+      "fieldname": "matter_controls_section",
+      "fieldtype": "Section Break",
+      "label": "Matter Controls"
+    },
+    {
+      "default": "0",
+      "fieldname": "required_on_matter",
+      "fieldtype": "Check",
+      "label": "Required on Matter"
+    },
+    {
+      "default": "1",
+      "fieldname": "allow_multiple_parties",
+      "fieldtype": "Check",
+      "label": "Allow Multiple Parties"
+    },
+    {
+      "default": "1",
+      "fieldname": "include_in_conflict_check",
+      "fieldtype": "Check",
+      "label": "Include in Conflict Check"
+    },
+    {
+      "default": "0",
+      "fieldname": "include_in_fica_check",
+      "fieldtype": "Check",
+      "label": "Include in FICA Check"
+    },
+    {
+      "fieldname": "column_break_matter_controls_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "include_in_documents",
+      "fieldtype": "Check",
+      "label": "Include in Documents"
+    },
+    {
+      "default": "0",
+      "fieldname": "include_in_billing",
+      "fieldtype": "Check",
+      "label": "Include in Billing"
+    },
+    {
+      "default": "0",
+      "fieldname": "include_in_service_list",
+      "fieldtype": "Check",
+      "label": "Include in Service List"
+    },
+    {
+      "default": "1",
+      "fieldname": "requires_contact_details",
+      "fieldtype": "Check",
+      "label": "Requires Contact Details"
+    },
+    {
+      "fieldname": "compliance_controls_section",
+      "fieldtype": "Section Break",
+      "label": "Compliance Controls"
+    },
+    {
+      "default": "0",
+      "fieldname": "requires_fica",
+      "fieldtype": "Check",
+      "label": "Requires FICA"
+    },
+    {
+      "default": "0",
+      "fieldname": "requires_id_or_registration_number",
+      "fieldtype": "Check",
+      "label": "Requires ID or Registration Number"
+    },
+    {
+      "default": "0",
+      "fieldname": "requires_address",
+      "fieldtype": "Check",
+      "label": "Requires Address"
+    },
+    {
+      "fieldname": "column_break_compliance_controls_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "requires_mandate",
+      "fieldtype": "Check",
+      "label": "Requires Mandate"
+    },
+    {
+      "default": "0",
+      "fieldname": "requires_power_of_attorney",
+      "fieldtype": "Check",
+      "label": "Requires Power of Attorney"
+    },
+    {
+      "default": "0",
+      "fieldname": "requires_capacity_description",
+      "fieldtype": "Check",
+      "label": "Requires Capacity Description"
+    },
+    {
+      "fieldname": "litigation_section",
+      "fieldtype": "Section Break",
+      "label": "Litigation"
+    },
+    {
+      "fieldname": "litigation_role_type",
+      "fieldtype": "Select",
+      "label": "Litigation Role Type",
+      "options": "\nPlaintiff / Applicant\nDefendant / Respondent\nWitness\nExpert Witness\nAttorney\nAdvocate\nCourt Official\nSheriff\nOther"
+    },
+    {
+      "fieldname": "court_side",
+      "fieldtype": "Select",
+      "label": "Court Side",
+      "options": "\nApplicant / Plaintiff Side\nRespondent / Defendant Side\nNeutral\nCourt / Forum"
+    },
+    {
+      "fieldname": "column_break_litigation_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_primary_litigation_party",
+      "fieldtype": "Check",
+      "label": "Is Primary Litigation Party"
+    },
+    {
+      "default": "0",
+      "fieldname": "appears_on_court_documents",
+      "fieldtype": "Check",
+      "label": "Appears on Court Documents"
+    },
+    {
+      "fieldname": "conveyancing_section",
+      "fieldtype": "Section Break",
+      "label": "Conveyancing"
+    },
+    {
+      "fieldname": "conveyancing_role_type",
+      "fieldtype": "Select",
+      "label": "Conveyancing Role Type",
+      "options": "\nSeller / Transferor\nPurchaser / Transferee\nBondholder\nBond Cancellation Bank\nEstate Agent\nConveyancer\nTransferring Attorney\nBond Attorney\nCancellation Attorney\nMunicipality\nManaging Agent\nOther"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_primary_conveyancing_party",
+      "fieldtype": "Check",
+      "label": "Is Primary Conveyancing Party"
+    },
+    {
+      "fieldname": "column_break_conveyancing_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "requires_property_interest",
+      "fieldtype": "Check",
+      "label": "Requires Property Interest"
+    },
+    {
+      "default": "0",
+      "fieldname": "requires_signing_capacity",
+      "fieldtype": "Check",
+      "label": "Requires Signing Capacity"
+    },
+    {
+      "fieldname": "collections_section",
+      "fieldtype": "Section Break",
+      "label": "Collections"
+    },
+    {
+      "fieldname": "collections_role_type",
+      "fieldtype": "Select",
+      "label": "Collections Role Type",
+      "options": "\nCreditor\nDebtor\nSurety\nEmployer\nGarnishee\nSheriff\nTracing Agent\nCorrespondent Attorney\nOther"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_debtor_role",
+      "fieldtype": "Check",
+      "label": "Is Debtor Role"
+    },
+    {
+      "fieldname": "column_break_collections_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_creditor_role",
+      "fieldtype": "Check",
+      "label": "Is Creditor Role"
+    },
+    {
+      "default": "0",
+      "fieldname": "is_surety_role",
+      "fieldtype": "Check",
+      "label": "Is Surety Role"
+    },
+    {
+      "fieldname": "system_section",
+      "fieldtype": "Section Break",
+      "label": "System"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-17 15:22:53.549187",
+ "modified_by": "Administrator",
+ "module": "Practice Setup",
+ "name": "Legal Party Role",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Legal Practice Administrator",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Managing Partner",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Partner"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Attorney"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Candidate Attorney"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Paralegal"
+    },
+    {
+      "email": 1,
+      "print": 1,
+      "read": 1,
+      "role": "Legal Secretary"
+    }
+  ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "sort_order",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "role_name",
+ "track_changes": 1
+}

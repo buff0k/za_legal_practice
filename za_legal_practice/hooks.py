@@ -77,6 +77,33 @@ fixtures = [
         "SETTLEMENT_FINALISATION",
         "BILLING_TRUST_FINALISATION",
         "CLOSED"
+    ]]]},
+    {"dt": "Legal Party Role", "filters": [["name", "in", [
+        "CLIENT",
+        "PLAINTIFF",
+        "DEFENDANT",
+        "APPLICANT",
+        "RESPONDENT",
+        "PURCHASER",
+        "SELLER",
+        "TRANSFEROR",
+        "TRANSFEREE",
+        "DEBTOR",
+        "CREDITOR",
+        "SURETY",
+        "WITNESS",
+        "EXPERT_WITNESS",
+        "OPPOSING_ATTORNEY",
+        "CORRESPONDENT_ATTORNEY",
+        "ADVOCATE",
+        "COURT",
+        "SHERIFF",
+        "MUNICIPALITY",
+        "EXECUTOR",
+        "BENEFICIARY",
+        "SPOUSE",
+        "ACCUSED",
+        "COMPLAINANT"
     ]]]}
 ]
 

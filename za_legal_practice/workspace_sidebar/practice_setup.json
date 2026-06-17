@@ -70,9 +70,20 @@
    "link_type": "DocType",
    "show_arrow": 0,
    "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Legal Party Role",
+   "link_to": "Legal Party Role",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
   }
  ],
- "modified": "2026-06-17 15:01:09.215936",
+ "modified": "2026-06-17 15:20:14.642335",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Practice Setup",
