@@ -208,8 +208,10 @@
   },
   {
    "fieldname": "default_stage",
-   "fieldtype": "Data",
-   "label": "Default Stage"
+   "fieldtype": "Link",
+   "label": "Default Stage",
+   "link_filters": "[[\"Matter Stage\",\"status\",\"=\",\"Active\"],[\"Matter Stage\",\"disabled\",\"=\",0]]",
+   "options": "Matter Stage"
   },
   {
    "default": "1",
@@ -556,7 +558,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-16 19:51:28.830966",
+ "modified": "2026-06-17 15:08:11.090899",
  "modified_by": "Administrator",
  "module": "Practice Setup",
  "name": "Matter Type",
