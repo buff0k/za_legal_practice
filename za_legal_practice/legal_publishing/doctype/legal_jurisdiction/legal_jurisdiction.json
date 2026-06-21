@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:jurisdiction_code",
+ "creation": "2026-06-21 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "jurisdiction_name",
+  "jurisdiction_code",
+  "jurisdiction_type",
+  "column_break_general_1",
+  "country_code",
+  "subdivision_code",
+  "parent_jurisdiction",
+  "enabled",
+  "language_section",
+  "default_language",
+  "column_break_language_1",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "jurisdiction_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Jurisdiction Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jurisdiction_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Jurisdiction Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Country",
+   "fieldname": "jurisdiction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Jurisdiction Type",
+   "options": "Country\nProvince\nMunicipality\nCourt\nRegulator\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "za",
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Country Code"
+  },
+  {
+   "fieldname": "subdivision_code",
+   "fieldtype": "Data",
+   "label": "Subdivision Code"
+  },
+  {
+   "fieldname": "parent_jurisdiction",
+   "fieldtype": "Link",
+   "label": "Parent Jurisdiction",
+   "options": "Legal Jurisdiction"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "language_section",
+   "fieldtype": "Section Break",
+   "label": "Language"
+  },
+  {
+   "fieldname": "default_language",
+   "fieldtype": "Link",
+   "label": "Default Language",
+   "options": "Language"
+  },
+  {
+   "fieldname": "column_break_language_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 14:31:55.457359",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Jurisdiction",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Practice Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Managing Partner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Attorney",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "jurisdiction_name,jurisdiction_code,country_code,subdivision_code",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "jurisdiction_name",
+ "track_changes": 1
+}

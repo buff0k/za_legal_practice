@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-06-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "naming_series",
+  "amending_instrument",
+  "target_instrument",
+  "target_provision",
+  "amendment_type",
+  "column_break_general_1",
+  "effective_date",
+  "status",
+  "reviewed_by",
+  "reviewed_on",
+  "instruction_section",
+  "commencement_condition",
+  "source_text",
+  "parsed_instruction_json",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LAMD-.#####",
+   "default": "LAMD-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amending_instrument",
+   "fieldtype": "Link",
+   "label": "Amending Instrument",
+   "options": "Legal Instrument",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "target_instrument",
+   "fieldtype": "Link",
+   "label": "Target Instrument",
+   "options": "Legal Instrument",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "target_provision",
+   "fieldtype": "Link",
+   "label": "Target Provision",
+   "options": "Legal Provision",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "amendment_type",
+   "fieldtype": "Select",
+   "label": "Amendment Type",
+   "options": "Insert\nSubstitute\nDelete\nRepeal\nCommence\nSuspend\nRenumber\nOther",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nParsed\nReviewed\nApplied\nRejected",
+   "default": "Draft",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Reviewed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "instruction_section",
+   "fieldtype": "Section Break",
+   "label": "Instruction"
+  },
+  {
+   "fieldname": "commencement_condition",
+   "fieldtype": "Small Text",
+   "label": "Commencement Condition"
+  },
+  {
+   "fieldname": "source_text",
+   "fieldtype": "Long Text",
+   "label": "Source Text",
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "parsed_instruction_json",
+   "fieldtype": "JSON",
+   "label": "Parsed Instruction JSON"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Amendment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal Practice Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "import": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Managing Partner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "import": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Attorney",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "amendment_type",
+ "search_fields": "amending_instrument,target_instrument,source_text"
+}

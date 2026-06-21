@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-06-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "naming_series",
+  "legal_instrument",
+  "expression",
+  "parent_provision",
+  "provision_type",
+  "column_break_general_1",
+  "num",
+  "heading",
+  "sequence_no",
+  "is_repealed",
+  "akn_section",
+  "e_id",
+  "frbr_uri",
+  "provision_path",
+  "column_break_akn_1",
+  "effective_from",
+  "effective_to",
+  "content_section",
+  "text_content",
+  "xml_fragment"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LPROV-.#####",
+   "default": "LPROV-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "legal_instrument",
+   "fieldtype": "Link",
+   "label": "Legal Instrument",
+   "options": "Legal Instrument",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "expression",
+   "fieldtype": "Link",
+   "label": "Expression",
+   "options": "Legal Instrument Expression",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "parent_provision",
+   "fieldtype": "Link",
+   "label": "Parent Provision",
+   "options": "Legal Provision"
+  },
+  {
+   "fieldname": "provision_type",
+   "fieldtype": "Select",
+   "label": "Provision Type",
+   "options": "chapter\npart\nsection\nsubsection\nparagraph\nitem\nschedule\narticle\nother",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "num",
+   "fieldtype": "Data",
+   "label": "Number",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "heading",
+   "fieldtype": "Data",
+   "label": "Heading",
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "sequence_no",
+   "fieldtype": "Int",
+   "label": "Sequence No",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_repealed",
+   "fieldtype": "Check",
+   "label": "Is Repealed",
+   "default": "0",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "akn_section",
+   "fieldtype": "Section Break",
+   "label": "Akoma Ntoso"
+  },
+  {
+   "fieldname": "e_id",
+   "fieldtype": "Data",
+   "label": "eId",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "frbr_uri",
+   "fieldtype": "Data",
+   "label": "FRBR URI",
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "provision_path",
+   "fieldtype": "Data",
+   "label": "Provision Path"
+  },
+  {
+   "fieldname": "column_break_akn_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "text_content",
+   "fieldtype": "Long Text",
+   "label": "Text Content",
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "xml_fragment",
+   "fieldtype": "Code",
+   "label": "XML Fragment",
+   "options": "XML"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Provision",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal Practice Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Attorney",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "Managing Partner",
+   "read": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "heading",
+ "search_fields": "heading,num,e_id,frbr_uri,text_content"
+}

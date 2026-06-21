@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "autoname": "method",
+ "creation": "2026-06-21 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "legal_instrument",
+  "expression_title",
+  "expression_status",
+  "column_break_general_1",
+  "expression_date",
+  "language",
+  "version_label",
+  "published",
+  "frbr_section",
+  "frbr_expression_uri",
+  "xml_hash",
+  "column_break_frbr_1",
+  "validation_status",
+  "validation_log",
+  "source_section",
+  "bluebell_text",
+  "xml_section",
+  "akn_xml",
+  "derived_section",
+  "html_preview",
+  "plain_text",
+  "publishing_section",
+  "published_on",
+  "published_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "legal_instrument",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Legal Instrument",
+   "options": "Legal Instrument",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expression_title",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Expression Title",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "expression_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Expression Status",
+   "options": "Draft\nImported\nParsed\nReviewed\nPublished\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expression_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Expression Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Language",
+   "options": "Language",
+   "reqd": 1
+  },
+  {
+   "fieldname": "version_label",
+   "fieldtype": "Data",
+   "label": "Version Label"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Published"
+  },
+  {
+   "fieldname": "frbr_section",
+   "fieldtype": "Section Break",
+   "label": "Akoma Ntoso / FRBR"
+  },
+  {
+   "fieldname": "frbr_expression_uri",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "FRBR Expression URI",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "xml_hash",
+   "fieldtype": "Data",
+   "label": "XML Hash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_frbr_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Not Validated",
+   "fieldname": "validation_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Validation Status",
+   "options": "Not Validated\nValid\nInvalid"
+  },
+  {
+   "fieldname": "validation_log",
+   "fieldtype": "Long Text",
+   "label": "Validation Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source Text"
+  },
+  {
+   "fieldname": "bluebell_text",
+   "fieldtype": "Long Text",
+   "label": "Bluebell Text"
+  },
+  {
+   "fieldname": "xml_section",
+   "fieldtype": "Section Break",
+   "label": "Akoma Ntoso XML"
+  },
+  {
+   "fieldname": "akn_xml",
+   "fieldtype": "Code",
+   "label": "AKN XML",
+   "options": "XML"
+  },
+  {
+   "fieldname": "derived_section",
+   "fieldtype": "Section Break",
+   "label": "Derived Content"
+  },
+  {
+   "fieldname": "html_preview",
+   "fieldtype": "Long Text",
+   "label": "HTML Preview",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plain_text",
+   "fieldtype": "Long Text",
+   "label": "Plain Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "publishing_section",
+   "fieldtype": "Section Break",
+   "label": "Publishing"
+  },
+  {
+   "fieldname": "published_on",
+   "fieldtype": "Datetime",
+   "label": "Published On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "published_by",
+   "fieldtype": "Link",
+   "label": "Published By",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 15:09:38.298328",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Instrument Expression",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Practice Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Managing Partner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Attorney",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "expression_title,frbr_expression_uri,version_label",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "expression_title",
+ "track_changes": 1
+}

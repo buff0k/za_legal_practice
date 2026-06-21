@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "",
+ "creation": "2026-06-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "amendment",
+  "sequence_no",
+  "applied",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "amendment",
+   "fieldtype": "Link",
+   "label": "Amendment",
+   "options": "Legal Amendment",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sequence_no",
+   "fieldtype": "Int",
+   "label": "Sequence No",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "applied",
+   "fieldtype": "Check",
+   "label": "Applied",
+   "default": "0",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Consolidation Amendment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1
+}

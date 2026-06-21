@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-06-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "naming_series",
+  "legal_instrument",
+  "expression",
+  "manifestation_type",
+  "column_break_general_1",
+  "file",
+  "source_url",
+  "imported_on",
+  "imported_by",
+  "file_metadata_section",
+  "file_hash",
+  "mime_type",
+  "page_count",
+  "column_break_file_metadata_1",
+  "is_searchable_pdf",
+  "ocr_required",
+  "ocr_job",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LMAN-.#####",
+   "default": "LMAN-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "legal_instrument",
+   "fieldtype": "Link",
+   "label": "Legal Instrument",
+   "options": "Legal Instrument",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "expression",
+   "fieldtype": "Link",
+   "label": "Expression",
+   "options": "Legal Instrument Expression",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "manifestation_type",
+   "fieldtype": "Select",
+   "label": "Manifestation Type",
+   "options": "Source PDF\nOCR PDF\nAKN XML\nHTML\nDOCX\nImage\nOther",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "label": "File"
+  },
+  {
+   "fieldname": "source_url",
+   "fieldtype": "Data",
+   "label": "Source URL"
+  },
+  {
+   "fieldname": "imported_on",
+   "fieldtype": "Datetime",
+   "label": "Imported On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "imported_by",
+   "fieldtype": "Link",
+   "label": "Imported By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_metadata_section",
+   "fieldtype": "Section Break",
+   "label": "File Metadata"
+  },
+  {
+   "fieldname": "file_hash",
+   "fieldtype": "Data",
+   "label": "File Hash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mime_type",
+   "fieldtype": "Data",
+   "label": "MIME Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "page_count",
+   "fieldtype": "Int",
+   "label": "Page Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_file_metadata_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_searchable_pdf",
+   "fieldtype": "Check",
+   "label": "Is Searchable PDF",
+   "default": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ocr_required",
+   "fieldtype": "Check",
+   "label": "OCR Required",
+   "default": "0"
+  },
+  {
+   "fieldname": "ocr_job",
+   "fieldtype": "Link",
+   "label": "OCR Job",
+   "options": "Legal OCR Job",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Instrument Manifestation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal Practice Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "import": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Managing Partner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "import": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Attorney",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "manifestation_type",
+ "search_fields": "legal_instrument,expression,source_url,file_hash"
+}

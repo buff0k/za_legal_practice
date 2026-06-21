@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "autoname": "method",
+ "creation": "2026-06-21 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "instrument_title",
+  "short_title",
+  "instrument_type",
+  "status",
+  "column_break_general_1",
+  "jurisdiction",
+  "akn_doctype",
+  "year",
+  "number",
+  "frbr_section",
+  "frbr_work_uri",
+  "external_id",
+  "column_break_frbr_1",
+  "source_url",
+  "latest_expression",
+  "dates_section",
+  "assent_date",
+  "publication_date",
+  "commencement_date",
+  "column_break_dates_1",
+  "repeal_date",
+  "principal_work",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "instrument_title",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Instrument Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "short_title",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Short Title"
+  },
+  {
+   "fieldname": "instrument_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Instrument Type",
+   "options": "Act\nBill\nRegulation\nNotice\nBy-law\nRule\nJudgment\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nPublished\nIn Force\nPartly in Force\nRepealed\nSuperseded\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Jurisdiction",
+   "options": "Legal Jurisdiction",
+   "reqd": 1
+  },
+  {
+   "default": "act",
+   "fieldname": "akn_doctype",
+   "fieldtype": "Select",
+   "label": "AKN Document Type",
+   "options": "act\nbill\njudgment\ndoc\nstatement\ndebateReport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "frbr_section",
+   "fieldtype": "Section Break",
+   "label": "Akoma Ntoso / FRBR"
+  },
+  {
+   "fieldname": "frbr_work_uri",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "FRBR Work URI",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "external_id",
+   "fieldtype": "Data",
+   "label": "External ID"
+  },
+  {
+   "fieldname": "column_break_frbr_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_url",
+   "fieldtype": "Data",
+   "label": "Source URL"
+  },
+  {
+   "fieldname": "latest_expression",
+   "fieldtype": "Link",
+   "label": "Latest Expression",
+   "options": "Legal Instrument Expression",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dates_section",
+   "fieldtype": "Section Break",
+   "label": "Dates"
+  },
+  {
+   "fieldname": "assent_date",
+   "fieldtype": "Date",
+   "label": "Assent Date"
+  },
+  {
+   "fieldname": "publication_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Publication Date"
+  },
+  {
+   "fieldname": "commencement_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Commencement Date"
+  },
+  {
+   "fieldname": "column_break_dates_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "repeal_date",
+   "fieldtype": "Date",
+   "label": "Repeal Date"
+  },
+  {
+   "fieldname": "principal_work",
+   "fieldtype": "Link",
+   "label": "Principal Work",
+   "options": "Legal Instrument"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 15:10:18.666679",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Instrument",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Practice Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Managing Partner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Attorney",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "instrument_title,short_title,frbr_work_uri,external_id,year,number",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "instrument_title",
+ "track_changes": 1
+}

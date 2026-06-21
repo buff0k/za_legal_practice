@@ -172,6 +172,18 @@ fixtures = [
         "NORTHERN_CAPE_DISTRICT_MAGISTRATES_COURTS",
         "WESTERN_CAPE_DISTRICT_MAGISTRATES_COURTS"
     ]]]},
+    {"dt": "Legal Jurisdiction", "filters": [["name", "in", [
+        "za",
+        "za-ec",
+    	"za-fs",
+	    "za-gp",
+        "za-kzn",
+        "za-lp",
+        "za-mp",
+        "za-nc",
+        "za-nw",
+        "za-wc",
+    ]]]},
 ]
 
 # Includes in <head>

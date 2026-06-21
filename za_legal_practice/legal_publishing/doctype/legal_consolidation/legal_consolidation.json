@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-06-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "naming_series",
+  "legal_instrument",
+  "consolidation_date",
+  "status",
+  "column_break_general_1",
+  "base_expression",
+  "result_expression",
+  "amendments_section",
+  "amendments_applied",
+  "logs_section",
+  "warnings",
+  "error_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LCON-.#####",
+   "default": "LCON-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "legal_instrument",
+   "fieldtype": "Link",
+   "label": "Legal Instrument",
+   "options": "Legal Instrument",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "consolidation_date",
+   "fieldtype": "Date",
+   "label": "Consolidation Date",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Queued\nRunning\nNeeds Review\nCompleted\nFailed",
+   "default": "Queued",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_expression",
+   "fieldtype": "Link",
+   "label": "Base Expression",
+   "options": "Legal Instrument Expression",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "result_expression",
+   "fieldtype": "Link",
+   "label": "Result Expression",
+   "options": "Legal Instrument Expression",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amendments_section",
+   "fieldtype": "Section Break",
+   "label": "Amendments Applied"
+  },
+  {
+   "fieldname": "amendments_applied",
+   "fieldtype": "Table",
+   "label": "Amendments Applied",
+   "options": "Legal Consolidation Amendment"
+  },
+  {
+   "fieldname": "logs_section",
+   "fieldtype": "Section Break",
+   "label": "Logs"
+  },
+  {
+   "fieldname": "warnings",
+   "fieldtype": "Long Text",
+   "label": "Warnings"
+  },
+  {
+   "fieldname": "error_log",
+   "fieldtype": "Long Text",
+   "label": "Error Log",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Consolidation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal Practice Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "import": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Managing Partner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "import": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Attorney",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "legal_instrument",
+ "search_fields": "legal_instrument,base_expression,result_expression"
+}

@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-06-21 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "naming_series",
+  "source_expression",
+  "source_provision",
+  "citation_text",
+  "citation_type",
+  "column_break_general_1",
+  "resolution_status",
+  "confidence",
+  "target_section",
+  "target_instrument",
+  "target_provision",
+  "column_break_target_1",
+  "target_frbr_uri",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LCIT-.#####",
+   "default": "LCIT-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_expression",
+   "fieldtype": "Link",
+   "label": "Source Expression",
+   "options": "Legal Instrument Expression",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "source_provision",
+   "fieldtype": "Link",
+   "label": "Source Provision",
+   "options": "Legal Provision",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "citation_text",
+   "fieldtype": "Data",
+   "label": "Citation Text",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "citation_type",
+   "fieldtype": "Select",
+   "label": "Citation Type",
+   "options": "Internal\nExternal\nCase\nStatute\nRegulation\nUnknown",
+   "default": "Unknown",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_general_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resolution_status",
+   "fieldtype": "Select",
+   "label": "Resolution Status",
+   "options": "Unresolved\nResolved\nAmbiguous\nInvalid",
+   "default": "Unresolved",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Percent",
+   "label": "Confidence"
+  },
+  {
+   "fieldname": "target_section",
+   "fieldtype": "Section Break",
+   "label": "Target"
+  },
+  {
+   "fieldname": "target_instrument",
+   "fieldtype": "Link",
+   "label": "Target Instrument",
+   "options": "Legal Instrument",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "target_provision",
+   "fieldtype": "Link",
+   "label": "Target Provision",
+   "options": "Legal Provision"
+  },
+  {
+   "fieldname": "column_break_target_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_frbr_uri",
+   "fieldtype": "Data",
+   "label": "Target FRBR URI",
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-21 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Publishing",
+ "name": "Legal Citation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "Legal Practice Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "import": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Managing Partner",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "import": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Attorney",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "title_field": "citation_text",
+ "search_fields": "citation_text,target_frbr_uri"
+}
