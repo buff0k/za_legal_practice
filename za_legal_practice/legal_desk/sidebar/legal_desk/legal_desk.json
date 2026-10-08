@@ -1,28 +1,27 @@
 {
  "app": "za_legal_practice",
- "creation": "2026-06-15 19:36:05.779198",
- "docstatus": 0,
- "doctype": "Workspace Sidebar",
- "idx": 5,
+ "doctype": "Sidebar",
+ "header_icon": null,
  "items": [
   {
    "child": 0,
    "collapsible": 1,
+   "doctype": "Sidebar Item",
+   "idx": 1,
    "indent": 0,
    "keep_closed": 0,
    "label": "Clients",
    "link_to": "Customer",
    "link_type": "DocType",
    "navigate_to_tab": "",
+   "parentfield": "items",
+   "parenttype": "Sidebar",
    "show_arrow": 0,
    "type": "Link"
   }
  ],
- "modified": "2026-06-15 20:18:55.046265",
- "modified_by": "Administrator",
  "module": "Legal Desk",
  "name": "Legal Desk",
- "owner": "Administrator",
  "standard": 1,
  "title": "Legal Desk"
 }

@@ -12,7 +12,7 @@ add_to_apps_screen = [
 		"name": "za_legal_practice",
 		"logo": "/assets/za_legal_practice/images/za_legal_practice_logo.png",
 		"title": "ZA Legal Practice",
-		"route": "desk/company",
+		"route": "/desk/customer",
 		"has_permission": "za_legal_practice.api.has_app_permission.has_app_permission"
 	}
 ]

@@ -1,27 +1,26 @@
 {
  "app": "za_legal_practice",
- "creation": "2026-06-15 19:36:56.691787",
- "docstatus": 0,
- "doctype": "Workspace Sidebar",
- "idx": 0,
+ "doctype": "Sidebar",
+ "header_icon": null,
  "items": [
   {
    "child": 0,
    "collapsible": 1,
+   "doctype": "Sidebar Item",
+   "idx": 1,
    "indent": 0,
    "keep_closed": 0,
    "label": "Companies",
    "link_to": "Company",
    "link_type": "DocType",
+   "parentfield": "items",
+   "parenttype": "Sidebar",
    "show_arrow": 0,
    "type": "Link"
   }
  ],
- "modified": "2026-06-15 20:07:31.073725",
- "modified_by": "Administrator",
+ "module": "Billing & Fees",
  "name": "Billing & Fees",
- "owner": "Administrator",
  "standard": 1,
- "title": "Billing & Fees",
- "module": "Billing & Fees"
+ "title": "Billing & Fees"
 }
